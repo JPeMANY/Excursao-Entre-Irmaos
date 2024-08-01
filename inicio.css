@@ -1,0 +1,163 @@
+:root {
+    --azulMarinho: #3582df;
+    --azul: #4fcbf3;
+    --verde: #6ddb98;
+
+    --azulMEscuro: #163458;
+    --azulEscuro: #156585;
+    --verdeEscuro: #0f7d5c;
+
+}
+
+body {
+    margin: 0;
+    font-family: "Montserrat", sans-serif;
+    scroll-behavior: smooth;
+    scroll-padding-top: 50px;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    background-image: linear-gradient(to right, var(--azulMarinho) 0%, var(--azul), 50%, var(--verde) 100%);
+}
+
+    ul {
+        list-style: none;
+        display: flex;
+    }
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.destinos {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+    .destinos div {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .destinos img {
+        height: 100%;
+        width: 100%;
+    }
+
+    .mes {
+        width: 50px;
+        justify-content: center;
+        align-items: center;
+    }
+
+        h3 {
+            writing-mode: vertical-lr;
+            transform: rotate(180deg);
+            margin: 0;
+        }
+
+    .destino1, .destino2, .destino3 {
+        width: 200px;
+        height: 300px;
+        background-color: #4a82d6;
+        color: white;
+        border: none;
+        border-radius: 30px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+    }
+
+    /* --- DESTINO 1 --- */
+    .destino1 {
+        background-color: var(--azulMarinho);
+    }
+
+        .destino1 h4 {
+            color: var(--azulMEscuro);
+        }
+
+        .destino1 .img::after {
+            background-image: linear-gradient(0deg, var(--azulMarinho) 30%, rgba(255, 255, 255, 0) 100%);
+        }
+
+    /* --- DESTINO 2 --- */
+    .destino2 {
+        background-color: var(--azul);
+    }
+
+        .destino2 h4 {
+            color: var(--azulEscuro);
+        }
+
+        .destino2 .img::after {
+            background-image: linear-gradient(0deg, var(--azul) 30%, rgba(255, 255, 255, 0) 100%);
+        }
+
+    /* --- DESTINO 3 --- */
+    .destino3 {
+        background-color: var(--verde);
+    }
+
+        .destino3 h4 {
+            color: var(--verdeEscuro);
+        }
+
+        .destino3 .img::after {
+            background-image: linear-gradient(0deg, var(--verde) 30%, rgba(255, 255, 255, 0) 100%);
+        }
+
+        .img {
+            background-image: url('cataratas.webp');
+            background-position: center;
+            background-size: cover;
+            height: 90%;
+            width: 85%;
+            border-radius: 20px;
+        }
+
+        .img::after {
+            content: "";
+            height: 100%;
+            width: 100%;
+        }
+
+        h4 {
+            position: absolute;
+            top: 65%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0;
+            text-align: center;
+        }
+
+            h4 span {
+                color: white;
+                font-size: 30px;
+            }
+
+
+.iconMensagem {
+    position: absolute;
+    bottom: 25px;
+    right: 25px;
+    background-color: #4a82d6;
+    height: 50px;
+    width: 50px;
+    border: none;
+    border-radius: 25px;
+}
