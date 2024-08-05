@@ -1,0 +1,86 @@
+html {
+    height: 100%;
+}
+
+body {
+    background-image: url('../assets/cataratas.webp');
+    background-repeat: no-repeat;
+    color: white;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+    body::before, body::after {
+        content: '';
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        left: 0;
+        top: 0;
+    }
+
+    body::before {
+        background-image: linear-gradient(90deg, var(--azulMarinho) 5%, #ffffff00 40%);
+        z-index: -1;
+    }
+
+    body::after {
+        background-image: linear-gradient(0deg, var(--azulMarinho) 0%, #ffffff00 50%);
+        z-index: -1;
+    }
+
+main {
+    background-color: rgba(53, 130, 223, 0.8);
+    flex: 1;
+}
+
+h1 {
+    color: var(--azulMEscuro);
+    margin: 0;
+}
+
+    h1 span {
+        color: white;
+    }
+
+button {
+    font-family: "Montserrat", sans-serif;
+}
+
+ul {
+    list-style: none;
+}
+
+main li {
+    margin-bottom: 25px;
+    line-height: 25px;
+}
+
+main li::before {
+    content: '';
+    position: relative;
+    left: 0;
+    top: 0;
+    padding: 0 15px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    font-size: 21px;
+}
+
+    .local::before {
+        background-image: url('../assets/localIcon.svg');
+    }
+
+    .pessoa::before {
+        background-image: url('../assets/pessoaIcon.svg');
+    }
+
+.btnReservar {
+    height: 60px;
+    width: 150px;
+    border: none;
+    border-radius: 30px;
+    color: var(--azulMarinho);
+}

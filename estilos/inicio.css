@@ -1,38 +1,3 @@
-:root {
-    --azulMarinho: #3582df;
-    --azul: #4fcbf3;
-    --verde: #6ddb98;
-
-    --azulMEscuro: #163458;
-    --azulEscuro: #156585;
-    --verdeEscuro: #0f7d5c;
-
-}
-
-body {
-    margin: 0;
-    font-family: "Montserrat", sans-serif;
-    scroll-behavior: smooth;
-    scroll-padding-top: 50px;
-}
-
-a {
-    text-decoration: none;
-    color: white;
-}
-
-header {
-    display: flex;
-    justify-content: space-between;
-    color: white;
-    background-image: linear-gradient(to right, var(--azulMarinho) 0%, var(--azul), 50%, var(--verde) 100%);
-}
-
-    ul {
-        list-style: none;
-        display: flex;
-    }
-
 main {
     display: flex;
     flex-direction: column;
@@ -79,6 +44,12 @@ main {
         justify-content: center;
         align-items: center;
         position: relative;
+        transition: all 0.3s ease;
+    }
+
+    .destino1:hover, .destino2:hover, .destino3:hover {
+        transform: scale(1.04);
+        transition: all 0.3s ease;
     }
 
     /* --- DESTINO 1 --- */
@@ -121,7 +92,7 @@ main {
         }
 
         .img {
-            background-image: url('cataratas.webp');
+            background-image: url('../assets/cataratas.webp');
             background-position: center;
             background-size: cover;
             height: 90%;

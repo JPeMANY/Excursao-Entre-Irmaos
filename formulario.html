@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos/formulario.css">
+    <title>Envio de formulário</title>
+</head>
+<body>
+    <h1>Viagens:</h1>
+
+    <div class="formulario">
+
+        <h3>Nome:</h3>
+        <input type="text" name="" id="nome">
+
+        <h3>Destino:</h3>
+
+        <input class="destino" id="iguacu" name="tipoViagem" type="radio" value="2400">
+        <label class="iguacu" for="iguacu">Cataratas do Iguaçu</label>
+        <br>
+
+        <input class="destino" id="betel" name="tipoViagem" type="radio" value="3200">
+        <label class="betel" for="betel">Betel</label>
+        <br>
+
+        <input class="destino" id="gramado" name="tipoViagem" type="radio" value="700">
+        <label class="gramado" for="gramado">Gramado</label>
+        <br>
+
+        <h3>Número de pessoas:</h3>
+        <input class="numeroPessoas" type="number">
+
+        <h3>Método de pagamento</h3>
+        <input id="pix" type="radio" name="tipoPagamento" value="Pix">
+            <label for="pix">Pix</label>
+        <input id="cartao" type="radio" name="tipoPagamento" value="Cartão de débito / crédito">
+            <label for="cartao">Cartão de débito / crédito</label>
+        <br>
+
+        <button class="btnCalcular">Calcular</button>
+
+        <h2 class="total">Valor: R$ <span class="valor">...</span>,00</h2>
+
+        <a class="btnEnviar" href="" target="_blank"><button>Enviar</button></a>
+    </div>
+
+    <script src="scripts/formulario.js"></script>
+</body>
+</html>
