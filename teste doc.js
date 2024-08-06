@@ -1,3 +1,1 @@
-console.log ("Hello Deed's!");
-
-let txt = 'Google Sheets!';
+console.log("Novo conte?do do arquivo");
