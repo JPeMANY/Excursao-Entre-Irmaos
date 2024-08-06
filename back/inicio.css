@@ -1,6 +1,5 @@
 :root {
-    --margem: 170px;
-    --cinza: #363b39;
+    --margemE: 120px;
 }
 
 main {
@@ -19,17 +18,18 @@ main {
 }
 
     .tituloInicial {
-        margin-left: var(--margem);
+        margin-left: var(--margemE);
         margin-top: 5%;
     }
 
-        h1, h2 {
+        h1 {
             display: flex;
             flex-direction: column;
             font-size: 40pt;
+            
         }
 
-        h1 span, h2 span {
+        h1 span {
             font-size: 65pt;
             line-height: 60pt;
             background-image: linear-gradient(45deg, var(--azulMarinho) 0%, var(--azul) 30%, var(--verde) 60%);
@@ -56,32 +56,15 @@ main {
     }
 
 
-#proximasViagens {
-    display: flex;
-    width: 100%;
-    margin-bottom: 20px;
-}
-
-    h2 {
-        margin-left: var(--margem);
-    }
-
-    h2 span {
-        line-height: 80pt;
-    }
 
 
-.destinosSecao {
+
+.destinos {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 20px;
-    
-    margin-bottom: 70px;
-    width: calc(100% - (var(--margem) * 2));
+    gap: 15px;
+    margin-bottom: 30px;
 }
-
     .destinos div {
         display: flex;
         flex-direction: column;
@@ -94,7 +77,6 @@ main {
 
     .mes {
         width: 50px;
-        display: flex;
         justify-content: center;
         align-items: center;
     }
@@ -103,12 +85,11 @@ main {
             writing-mode: vertical-lr;
             transform: rotate(180deg);
             margin: 0;
-            font-size: 25pt;
         }
 
-    .cartaoDestino {
-        flex: 1;
-        height: 400px;
+    .destino1, .destino2, .destino3 {
+        width: 200px;
+        height: 300px;
         background-color: #4a82d6;
         color: white;
         border: none;
@@ -121,68 +102,47 @@ main {
         transition: all 0.3s ease;
     }
 
-    .cartaoDestino:hover {
-        /*transform: scale(1.04);*/
-        transition: all 0.8s ease;
-        flex: 3;
+    .destino1:hover, .destino2:hover, .destino3:hover {
+        transform: scale(1.04);
+        transition: all 0.3s ease;
     }
 
-    .info {
-        display: none;
-        opacity: 0;
-        position: absolute;
-    }
-
-    .cartaoDestino:hover .info {
-        display: block;
-        opacity: 1;
-    }
-
-    .cartaoDestino .img::after {
-        content: '';
-        height: 100%;
-        width: 100%;
-        display: block;
-    }
-
-    
-
-    /* --- DESTINO Azul Marinho --- */
-    .destinoAzulM {
+    /* --- DESTINO 1 --- */
+    .destino1 {
         background-color: var(--azulMarinho);
     }
 
-        .destinoAzulM h4 {
+        .destino1 h4 {
             color: var(--azulMEscuro);
         }
 
-        .destinoAzulM .img::after {
+        .destino1 .img::after {
             background-image: linear-gradient(0deg, var(--azulMarinho) 30%, rgba(255, 255, 255, 0) 100%);
         }
 
-    /* --- DESTINO Azul --- */
-    .destinoAzul {
+    /* --- DESTINO 2 --- */
+    .destino2 {
         background-color: var(--azul);
     }
 
-        .destinoAzul h4 {
+        .destino2 h4 {
             color: var(--azulEscuro);
         }
 
-        .destinoAzul .img::after {
+        .destino2 .img::after {
             background-image: linear-gradient(0deg, var(--azul) 30%, rgba(255, 255, 255, 0) 100%);
         }
 
-    /* --- DESTINO verde --- */
-    .destinoVerde {
+    /* --- DESTINO 3 --- */
+    .destino3 {
         background-color: var(--verde);
     }
 
-        .destinoVerde h4 {
+        .destino3 h4 {
             color: var(--verdeEscuro);
         }
 
-        .destinoVerde .img::after {
+        .destino3 .img::after {
             background-image: linear-gradient(0deg, var(--verde) 30%, rgba(255, 255, 255, 0) 100%);
         }
 
@@ -195,7 +155,13 @@ main {
             border-radius: 20px;
         }
 
-        .cartaoDestino h4 {
+        .img::after {
+            content: "";
+            height: 100%;
+            width: 100%;
+        }
+
+        h4 {
             position: absolute;
             top: 65%;
             display: flex;
@@ -205,14 +171,14 @@ main {
             text-align: center;
         }
 
-            .cartaoDestino h4 span {
+            h4 span {
                 color: white;
                 font-size: 30px;
             }
 
 
 .iconMensagem {
-    position: fixed;
+    position: absolute;
     bottom: 25px;
     right: 25px;
     background-color: #4a82d6;

@@ -21,13 +21,69 @@ a {
 }
 
 header {
+    position: fixed;
+    z-index: 2;
+
     display: flex;
-    justify-content: space-between;
+    align-items: center;
     color: white;
     background-image: linear-gradient(to right, var(--azulMarinho) 0%, var(--azul), 50%, var(--verde) 100%);
+
+    width: 100%;
+    height: 60px;
+
+    border-bottom: 4px solid white;
+}
+
+nav {
+    width: calc(100vw - 250px);
 }
 
     nav ul {
         list-style: none;
         display: flex;
+        gap: 30px;
     }
+    
+    nav li {
+        cursor: pointer;
+    }
+
+    nav li:nth-child(3) {
+        margin-left: auto;
+    }
+
+    .logotipo {
+        background-color: white;
+        height: 100%;
+        width: 200px;
+        border-radius: 0 50px 50px 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: ease-in 0.2s all;
+    }
+
+    .logotipo:hover {
+        width: 250px;
+        transition: ease-out 0.2s all;
+    }
+
+    .logotipo a {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        height: 100%;
+        color: var(--azulMarinho);
+        z-index: 2;
+        margin-left: -20px;
+    }
+
+        .logotipo a img {
+            height: 75%;
+        }
+
+        .logotipo p {
+            margin-left: 10px;
+            font-weight: 500;
+        }
