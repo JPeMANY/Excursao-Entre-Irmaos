@@ -1,6 +1,5 @@
 :root {
     --margem: 170px;
-    --cinza: #363b39;
 }
 
 main {
@@ -9,6 +8,29 @@ main {
     align-items: center;
 }
 
+.backgroundInicio {
+    width: 100%;
+    height: 100%;
+    background-image: url('../assets/cataratas.webp');
+    background-size: cover;
+    background-position: center;
+    position: fixed;
+    z-index: -2;
+    left: 0;
+    top: 0;
+}
+
+    .backgroundInicio::after {
+        content: '';
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        background-color: rgba(0, 0, 0, 0.9);
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+
 #inicioSecao {
     display: flex;
     justify-content: space-between;
@@ -16,6 +38,8 @@ main {
     height: 100vh;
     overflow: hidden;
     position: relative;
+    z-index: 0;
+    color: white;
 }
 
     .tituloInicial {
@@ -37,29 +61,12 @@ main {
             -webkit-text-fill-color: transparent;
         }
 
-    .circulo {
-        background-image: linear-gradient(20deg, var(--azulMarinho) 0%, var(--azul) 50%, var(--verde) 90%);
-        position: absolute;
-        height: 900px;
-        width: 900px;
-        border-radius: 50%; 
-        top: 10%; 
-        left: 65%;
-        z-index: -1; 
-    }
-
-    .onibus {
-        width: auto;
-        height: 700px;
-        position: relative;
-        margin-top: 100px;
-    }
-
-
 #proximasViagens {
     display: flex;
     width: 100%;
-    margin-bottom: 20px;
+    border: none;
+    border-radius: 40px 40px 0 0;
+    background-color: white;
 }
 
     h2 {
@@ -70,6 +77,14 @@ main {
         line-height: 80pt;
     }
 
+.conteudo {
+    width: 100%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}    
 
 .destinosSecao {
     display: flex;
@@ -80,6 +95,8 @@ main {
     
     margin-bottom: 70px;
     width: calc(100% - (var(--margem) * 2));
+
+    background-color: white;
 }
 
     .destinos div {
@@ -104,6 +121,7 @@ main {
             transform: rotate(180deg);
             margin: 0;
             font-size: 25pt;
+            color: var(--cinza);
         }
 
     .cartaoDestino {
@@ -118,7 +136,9 @@ main {
         justify-content: center;
         align-items: center;
         position: relative;
-        transition: all 0.3s ease;
+        transition: all 0.5s ease;
+
+        box-shadow: rgba(149, 157, 165, 0.4) 0 15px 24px -3px;
     }
 
     .cartaoDestino:hover {
@@ -127,25 +147,105 @@ main {
         flex: 3;
     }
 
-    .info {
-        display: none;
-        opacity: 0;
-        position: absolute;
-    }
+        .imgCartao {
+            position: absolute;
+            background-image: url('../assets/cataratas.webp');
+            background-position: center;
+            background-size: cover;
+            height: calc(100% - 30px);
+            width: calc(100% - 30px);
+            border-radius: 20px;
+            z-index: 0;
+        }
 
-    .cartaoDestino:hover .info {
-        display: block;
-        opacity: 1;
-    }
+        .conteudoCartao {
+            display: flex;
+            z-index: 1;
+            width: 100%;
+            height: 80%;
+        }
 
-    .cartaoDestino .img::after {
-        content: '';
-        height: 100%;
-        width: 100%;
-        display: block;
-    }
+            .cartaoDestino h4 {
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                margin: 0;
+                text-align: center;
+                transition: all 0.5s ease;
+            }
 
-    
+                .cartaoDestino h4 span {
+                    color: white;
+                    font-size: 30px;
+                }
+
+
+            .cartaoDestino ul {
+                list-style: none;
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+            }
+
+                .cartaoDestino li {
+                    position: relative;
+                    padding-left: 30px;
+                }
+
+                .cartaoDestino li::before {
+                    content: '';
+                    position: absolute;
+                    left: 0;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    width: 20px;
+                    height: 20px;
+                    background-image: url('../assets/localIcon.svg');
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                }
+
+            .info {
+                flex: 0;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                opacity: 0;
+                transition: flex 0.5s ease, opacity 0.2s;
+                width: 0%;
+                border-left: 2px solid white;
+            }
+
+                .info a {
+                    width: 80%;
+                    height: 40px;
+                }
+
+                .info button {
+                    width: 100%;
+                    height: 100%;
+                    border: none;
+                    border-radius: 20px;
+                    background-color: white;
+                    color: var(--cinza);
+                    margin-top: 25px;
+                }
+
+            .cartaoDestino:hover .info {
+                flex: 1;
+                opacity: 1;
+                transition: flex 0.5s ease, opacity 0.5s ease 200ms;
+            }
+
+            .cartaoDestino .imgCartao::after {
+                content: '';
+                height: 100%;
+                width: 100%;
+                display: block;
+            }
 
     /* --- DESTINO Azul Marinho --- */
     .destinoAzulM {
@@ -156,7 +256,7 @@ main {
             color: var(--azulMEscuro);
         }
 
-        .destinoAzulM .img::after {
+        .destinoAzulM .imgCartao::after {
             background-image: linear-gradient(0deg, var(--azulMarinho) 30%, rgba(255, 255, 255, 0) 100%);
         }
 
@@ -169,7 +269,7 @@ main {
             color: var(--azulEscuro);
         }
 
-        .destinoAzul .img::after {
+        .destinoAzul .imgCartao::after {
             background-image: linear-gradient(0deg, var(--azul) 30%, rgba(255, 255, 255, 0) 100%);
         }
 
@@ -182,43 +282,14 @@ main {
             color: var(--verdeEscuro);
         }
 
-        .destinoVerde .img::after {
+        .destinoVerde .imgCartao::after {
             background-image: linear-gradient(0deg, var(--verde) 30%, rgba(255, 255, 255, 0) 100%);
         }
 
-        .img {
-            background-image: url('../assets/cataratas.webp');
-            background-position: center;
-            background-size: cover;
-            height: 90%;
-            width: 85%;
-            border-radius: 20px;
-        }
-
-        .cartaoDestino h4 {
-            position: absolute;
-            top: 65%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin: 0;
-            text-align: center;
-        }
-
-            .cartaoDestino h4 span {
-                color: white;
-                font-size: 30px;
-            }
 
 
-.iconMensagem {
-    position: fixed;
-    bottom: 25px;
-    right: 25px;
-    background-color: #4a82d6;
-    height: 50px;
-    width: 50px;
-    border: none;
-    border-radius: 25px;
+@media (max-width: 1000px) {
+    :root {
+        --margem: 60px;
+    }
 }
-
