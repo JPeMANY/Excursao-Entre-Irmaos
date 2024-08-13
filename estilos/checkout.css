@@ -1,0 +1,11 @@
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.prototipo {
+    margin-top: 60px;
+    height: auto;
+    width: 85%;
+}

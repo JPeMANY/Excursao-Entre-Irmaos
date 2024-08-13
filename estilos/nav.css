@@ -77,25 +77,6 @@ header:hover {
     animation: gradiente 5s infinite;
 }
 
-
-
-
-/*
-header::after {
-    content: '';
-    background-image: linear-gradient(to right, var(--azulMarinho) 0%, var(--azul), 50%, var(--verde) 100%);
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    z-index: -1;
-    transition: all 1s ease;
-    right: 0;
-}
-header:hover header::after {
-    width: 50%;
-    transition: all 1s ease;
-}*/
-
 nav {
     width: calc(100vw - 250px);
 }
@@ -111,7 +92,7 @@ nav {
         cursor: pointer;
     }
 
-    nav li:nth-child(3) {
+    nav a:nth-child(3) {
         margin-left: auto;
     }
 
@@ -185,4 +166,9 @@ nav {
 .iconMensagem:hover img {
     transform: scale(1.15);
     transition: all 0.2s ease;
+}
+
+footer {
+    height: 200px;
+    background-color: white;
 }
