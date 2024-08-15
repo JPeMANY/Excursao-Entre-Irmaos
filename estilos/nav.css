@@ -9,6 +9,14 @@
         --azulMEscuro: #163458;
         --azulEscuro: #156585;
         --verdeEscuro: #0f7d5c;
+
+        --margem: 170px;
+    }
+
+    @media (max-width: 1000px) {
+        :root {
+            --margem: 60px;
+        }
     }
 
     html {
@@ -30,6 +38,11 @@
     button {
         font-family: "Montserrat", sans-serif;
         cursor: pointer;
+    }
+
+    footer {
+        height: 200px;
+        background-color: white;
     }
 
 /* ---- */
@@ -166,9 +179,4 @@ nav {
 .iconMensagem:hover img {
     transform: scale(1.15);
     transition: all 0.2s ease;
-}
-
-footer {
-    height: 200px;
-    background-color: white;
 }
