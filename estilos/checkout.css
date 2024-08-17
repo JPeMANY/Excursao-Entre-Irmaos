@@ -50,25 +50,62 @@ h1 span {
     display: flex;
     flex-wrap: wrap;
     gap: 15px;
+    border-radius: 10px;
 }
 
-    .formDestinos span {
+    .formDestinos > span {
         width: 90%;
         margin: 0;
         padding: 0;
         height: 15px;
     }
 
-    .formDestinos div {
+    .formDestinos label {
         min-width: 250px;
-        max-width: 280px;
+        max-width: 30%;
         height: 45%;
-        background-color: brown;
-        border-radius: 20px;
+
         display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
+        position: relative;
+
+        border-radius: 20px;
+        --cor: var(--azulMarinho);
+        background-color: var(--cor);
+        color: white;
     }
+
+        .formDestinos label:hover {
+            --cor: var(--azul);
+            scale: 1.04;
+        }
+
+        .formDestinos label::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: calc(100% - 30px);
+            width: calc(100% - 30px);
+            margin: 15px 0 0 15px;
+            background-image: linear-gradient(0deg, var(--cor) 30%, rgba(255, 255, 255, 0) 100%);
+        }
+
+        .formDestinos label:has(input:checked) {
+            --cor: var(--verde)
+        }
+
+        .formDestinos label input {
+            all: unset;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            border-radius: 20px;
+        }
 
         .formDestinos img{
             height: calc(100% - 30px);
@@ -76,9 +113,19 @@ h1 span {
             object-fit: cover;
             object-position: center;
             border-radius: 10px;
+            position: absolute;
         }
 
-    .formDestinos div:nth-child(1),
+        .formDestinos label span, .formDestinos label h2 {
+            z-index: 1;
+            text-align: center;
+        }
+
+    .campoObrigatorio::after, .formDestinos > span::after {
+        content: ' *';
+        color: red;
+    }
+
 
 .botoes {
     grid-area: botoes;

@@ -36,18 +36,21 @@
 
         <h1>Formulário de<span>Reserva</span></h1>
 
+        <p>R$ <span class="valorTotal"></span></p>
+
         <div class="formDados">
-            <label for="nome">Nome</label>
+            <label for="nome" class="campoObrigatorio">Nome</label>
             <input id="nome" type="text">
 
-            <label for="pessoas">Número de pessoas</label>
-            <input id="pessoas" type="text">
+            <label for="pessoas" class="campoObrigatorio">Número de pessoas</label>
+            <input id="pessoas" type="number">
 
-            <label for="pagamento">Método de pagamento</label>
+            <label for="pagamento" class="campoObrigatorio">Método de pagamento</label>
             <input id="pagamento" type="text">
 
-            <label for="whats">Número de Whatsapp</label>
-            <input id="whats" type="text">
+            <label for="whats" class="campoObrigatorio">Número de Whatsapp</label>
+            <input type="tel" id="whats" maxlength="14" placeholder="(XX) XXXXX-XXXX">
+            
 
             <label for="observacao">Observação</label>
             <input id="observacao" type="text">
@@ -56,55 +59,74 @@
         <div class="formDestinos">
             <span>Destino:</span>
             
-            <div>
+            <label>
+                <input type="radio" name="destino">
                 <img src="">
                 <h2></h2>
-            </div>
+                <span></span>
+            </label>
 
-            <div>
+            <label>
+                <input type="radio" name="destino">
                 <img src="">
                 <h2></h2>
-            </div>
+                <span></span>
+            </label>
 
-            <div>
+            <label>
+                <input type="radio" name="destino">
                 <img src="">
                 <h2></h2>
-            </div>
+                <span></span>
+            </label>
 
-            <div>
+            <label>
+                <input type="radio" name="destino">
                 <img src="">
                 <h2></h2>
-            </div>
+                <span></span>
+            </label>
 
-            <div>
+            <label>
+                <input type="radio" name="destino">
                 <img src="">
                 <h2></h2>
-            </div>
+                <span></span>
+            </label>
 
-            <div>
+            <label>
+                <input type="radio" name="destino">
                 <img src="">
                 <h2></h2>
-            </div>
+                <span></span>
+            </label>
 
-            <div>
+            <label>
+                <input type="radio" name="destino">
                 <img src="">
                 <h2></h2>
-            </div>
+                <span></span>
+            </label>
 
-            <div>
+            <label>
+                <input type="radio" name="destino">
                 <img src="">
                 <h2></h2>
-            </div>
+                <span></span>
+            </label>
 
-            <div>
+            <label>
+                <input type="radio" name="destino">
                 <img src="">
                 <h2></h2>
-            </div>
+                <span></span>
+            </label>
         </div>
 
         <div class="botoes">
-            <button class="btnLimpar">Limpar</button>
-            <button class="btnEnviar">Enviar</button>
+            <button id="btnLimpar">Limpar</button>
+            <button id="btnCalcular">Calcular</button>
+            <button id="btnEnviar">Enviar</button>
         </div>
     </main>
 
