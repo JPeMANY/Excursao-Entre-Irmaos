@@ -1,69 +1,170 @@
-main {
-    display: grid;
-    grid-template: 
-    'titulo titulo'
-    'dados destinos'
-    'botoes botoes'
-    / 1fr 2fr;
-    column-gap: 70px;
-    padding: 0 var(--margem);
+:root {
+    --azulClaro: #acdcea;
 }
 
-.prototipo {
-    margin-top: 60px;
-    height: auto;
-    width: 85%;
+main {
+    background-color: #2d2d2d;
+    display: flex;
+    flex-direction: column;
 }
 
 h1 {
     margin-top: 100px;
-    grid-area: titulo;
     display: flex;
     flex-direction: column;
     font-size: 25pt;
 }
 
-h1 span {
-    font-size: 35pt;
-    background-image: linear-gradient(45deg, var(--azulMarinho) 0%, var(--azul) 30%, var(--verde) 60%);
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-.formDados {
-    grid-area: dados;
-    display: flex;
-    flex-direction: column;
-}
-
-    .formDados input {
-        margin: 5px 0 25px 0;
-        height: 50px;
-        border-radius: 10px;
-        border: 1px solid #b3b3b3;
-        font-size: 19px;
-        padding: 0 10px;
+    h1 span {
+        font-size: 35pt;
+        background-image: linear-gradient(45deg, var(--azulMarinho) 0%, var(--azul) 10%, var(--verde) 40%);
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
     }
 
-.formDestinos {
-    grid-area: destinos;
+main > img {
+    transform: rotate(30deg);
+    position: fixed;
+    z-index: 0;
+    right: 80px;
+}
+
+.pagina {
+    display: flex;
+    padding: 70px var(--margem) 0 var(--margem);
+
+    background-color: white;
+    border-radius: 40px 40px 0 0;
+    z-index: 1;
+}
+
+    .progressoSecao {
+        width: 30%;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+        .linha {
+            position: absolute;
+            height: 100%;
+            width: 1px;
+            border: 3px solid var(--azulClaro);
+            box-sizing: border-box;
+            margin-left: 9px;
+        }
+
+        .pessoais, .destinos, .viagem, .revisao {
+            display: flex;
+            align-items: center;
+        }
+
+            .circulo {
+                height: 16px;
+                width: 16px;
+                border-radius: 50%;
+                background-color: var(--azulClaro);
+                border: 4px solid white;
+                z-index: 1;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+                .circulo img {
+                    opacity: 0;
+                    height: 60%;
+                    width: auto;
+                }
+
+            .destaque .circulo{
+                margin-left: -12px;
+                width: 40px;
+                height: 40px;
+                background-color: var(--azulMarinho);
+            }
+
+                .destaque .circulo img {
+                    opacity: 1;
+                }
+
+            h2 {
+                margin: 0 0 0 10px;
+                display: flex;
+                flex-direction: column;
+                font-weight: 400;
+                color: var(--azulClaro);
+            }
+
+                h2 span {
+                    font-weight: 700;
+                }
+
+            .destaque h2 {
+                color: var(--azulMarinho);
+            }
+
+
+    .form {
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+    }
+
+        .infoPessoais, .infoViagem {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .infoPessoais label {
+            width: 70%;
+            height: 50px;
+            margin: 5px 0 25px 0;
+            position: relative;
+        }
+
+        .infoPessoais input, .infoViagem input {
+            height: 100%;
+            width: 100%;
+            border-radius: 10px;
+            border: 1px solid #b3b3b3;
+            font-size: 19px;
+            padding: 0 10px;
+        }
+
+            .infoPessoais label img {
+                position: absolute;
+                left: 0;
+                top: 0;
+                transform: translateY(50%);
+            }
+            
+            .infoPessoais label span {
+                position: absolute;
+                left: 0;
+                top: 0;
+                transform: translateY(50%);
+            }
+
+.infoDestino {
     display: flex;
     flex-wrap: wrap;
     gap: 15px;
     border-radius: 10px;
 }
 
-    .formDestinos > span {
+    .infoDestino > span {
         width: 90%;
         margin: 0;
         padding: 0;
         height: 15px;
     }
 
-    .formDestinos label {
-        min-width: 250px;
-        max-width: 30%;
+    .infoDestino label {
         height: 45%;
+        min-width: 30%;
+        flex: 1;
 
         display: flex;
         flex-direction: column;
@@ -77,12 +178,12 @@ h1 span {
         color: white;
     }
 
-        .formDestinos label:hover {
+        .infoDestino label:hover {
             --cor: var(--azul);
             scale: 1.04;
         }
 
-        .formDestinos label::after {
+        .infoDestino label::after {
             content: '';
             position: absolute;
             top: 0;
@@ -93,11 +194,11 @@ h1 span {
             background-image: linear-gradient(0deg, var(--cor) 30%, rgba(255, 255, 255, 0) 100%);
         }
 
-        .formDestinos label:has(input:checked) {
+        .infoDestino label:has(input:checked) {
             --cor: var(--verde)
         }
 
-        .formDestinos label input {
+        .infoDestino label input {
             all: unset;
             position: absolute;
             width: 100%;
@@ -107,7 +208,7 @@ h1 span {
             border-radius: 20px;
         }
 
-        .formDestinos img{
+        .infoDestino img{
             height: calc(100% - 30px);
             width: calc(100% - 30px);
             object-fit: cover;
@@ -116,23 +217,28 @@ h1 span {
             position: absolute;
         }
 
-        .formDestinos label span, .formDestinos label h2 {
+        .infoDestino label span, .infoDestino label h2 {
             z-index: 1;
             text-align: center;
         }
 
-    .campoObrigatorio::after, .formDestinos > span::after {
+        .infoDestino h2 {
+            width: 90%;
+        }
+
+    .campoObrigatorio::after, .infoDestino > span::after {
         content: ' *';
         color: red;
     }
 
 
 .botoes {
-    grid-area: botoes;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     gap: 15px;
     margin-top: 80px;
+    width: 20%;
 }
 
     .botoes button {
@@ -142,14 +248,14 @@ h1 span {
         font-size: 19px;
     }
 
-    .btnLimpar {
+    #btnLimpar {
         border: 2px solid #b3b3b3;
         color: #b3b3b3;
         background-color: white;
     }
 
-    .btnEnviar {
+    #btnCalcular, #btnEnviar {
         border: none;
-        background-image: linear-gradient(90deg, var(--azulMarinho) 0%, var(--azul) 50%, var(--verde) 100%);
+        background-image: linear-gradient(90deg, var(--azulMarinho) -50%, var(--azul) 50%, var(--verde) 120%);
         color: white;
     }

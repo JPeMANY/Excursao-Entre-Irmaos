@@ -14,7 +14,7 @@ const destinos = [
         ]
     },
     {
-        titulo: '',
+        titulo: 'teste',
         destinos: 'Buenos Aires / Betel / Tigre / Campanópolis',
         dataInicio: '16/08 ',
         dataRetorno: '21/08',
@@ -36,7 +36,7 @@ const destinos = [
         imagens: []
     },
     {
-        titulo: '',
+        titulo: 'teste',
         destinos: 'Maria Fumaça / Epopeia Italiana',
         dataInicio: '01/09',
         dataRetorno: '01/09',
@@ -50,7 +50,7 @@ const destinos = [
         ]
     },
     {
-        titulo: '',
+        titulo: 'teste',
         destinos: 'Termas Marcelino Ramos ',
         dataInicio: '06/09',
         dataRetorno: '08/09',

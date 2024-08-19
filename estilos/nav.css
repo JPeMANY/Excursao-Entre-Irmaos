@@ -45,6 +45,10 @@
         background-color: white;
     }
 
+    .none {
+        display: none;
+    }
+
 /* ---- */
 
 header {

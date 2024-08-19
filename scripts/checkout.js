@@ -1,11 +1,11 @@
 // ATUALIZA AS IMAGENS / NOME / VALOR / DOS CARTÕES
 
-    const formDestinos = document.querySelector('.formDestinos');
-    const cartoes = document.querySelectorAll('.formDestinos label');
-    const inputCartoes = document.querySelectorAll('.formDestinos input')
-    const imagensDestinos = document.querySelectorAll('.formDestinos img');
-    const tituloCartoes = document.querySelectorAll('.formDestinos h2');
-    const valorCartoes = document.querySelectorAll('.formDestinos label span');
+    const infoDestino = document.querySelector('.infoDestino');
+    const cartoes = document.querySelectorAll('.infoDestino label');
+    const inputCartoes = document.querySelectorAll('.infoDestino input')
+    const imagensDestinos = document.querySelectorAll('.infoDestino img');
+    const tituloCartoes = document.querySelectorAll('.infoDestino h2');
+    const valorCartoes = document.querySelectorAll('.infoDestino label span');
 
     for (let i = 0; i < cartoes.length; i++) {
         // Verifica se há imagens no banco de dados para a viagem
@@ -50,9 +50,8 @@
 
     let valorTotal;
 
-
     function atualizarValor() {
-        const destinoSelecionado = document.querySelector('.formDestinos input:checked');
+        const destinoSelecionado = document.querySelector('.infoDestino input:checked');
         valorTotal = destinoSelecionado.value * inputPessoas.value;
         valorP.textContent = `R$ ${valorTotal},00`;
     }
@@ -63,13 +62,13 @@
         let verificarPreenchimento = 0;
 
         // Verifica se alguma opção de destino está Check
-        const destinosCheck = document.querySelector('.formDestinos input:checked') != null;
+        const destinosCheck = document.querySelector('.infoDestino input:checked') != null;
         if (destinosCheck) {
             verificarPreenchimento += 1;
         } else {
-            formDestinos.style.border = '3px solid red';
+            infoDestino.style.border = '3px solid red';
             setTimeout(()=> {
-                formDestinos.style.border = 'none';
+                infoDestino.style.border = 'none';
             }, 4000)
         }
 
@@ -85,12 +84,15 @@
                 setTimeout(()=> { inputs[i].style.border = '1px solid #b3b3b3' }, 4000)
             }
         }
+
+        console.log(verificarPreenchimento)
+
         // Se todos estiverem preenchidos
-        if (verificarPreenchimento >= (camposObrigatorios + 1)) {
+        if (verificarPreenchimento >= (camposObrigatorios.length + 1)) {
             console.log('todos os campos estão preenchidos!')
             atualizarValor();
         } else {
-            console.log('faltam ' + (4 - verificarPreenchimento) + ' campos');
+            console.log('faltam ' + (5 - verificarPreenchimento) + ' campos');
         }
     })
 
@@ -124,3 +126,17 @@
 
             e.target.value = input;
         });
+
+
+// Botões página
+
+        //buttonCima
+        //buttonBaixo
+
+        const infoPessoais = document.querySelector('.infoPessoais');
+        //const infoDestino = document.querySelector('.infoDestino'); - JÁ EXISTE
+        const infoViagem = document.querySelector('.infoViagem');
+        const revisao = document.querySelector('.revisao');
+
+        const btnAnterior = document.getElementById('btnAnterior');
+        const btnProximo = document.getElementById('btnProximo');

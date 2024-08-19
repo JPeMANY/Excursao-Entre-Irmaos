@@ -8,8 +8,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" type="text/css" href="estilos/nav.css">
     <link rel="stylesheet" type="text/css" href="estilos/checkout.css">
+    <link rel="stylesheet" type="text/css" href="estilos/nav.css">
 
     <title>Checkout</title>
 </head>
@@ -32,103 +32,163 @@
     </header>
 
     <main>
-        <!--<img class="prototipo" src="imagens/checkoutPrototipo.png">-->
-
         <h1>Formulário de<span>Reserva</span></h1>
+        <img src="imagens/formIcon.svg">
 
-        <p>R$ <span class="valorTotal"></span></p>
+        <div class="pagina">
 
-        <div class="formDados">
-            <label for="nome" class="campoObrigatorio">Nome</label>
-            <input id="nome" type="text">
+            <div class="progressoSecao">
+                <div class="linha"></div>
 
-            <label for="pessoas" class="campoObrigatorio">Número de pessoas</label>
-            <input id="pessoas" type="number">
+                <div class="pessoais destaque">
+                    <div class="circulo">
+                        <img src="imagens/pessoaIcon.svg">
+                    </div>
+                    <h2>Informações <span>Pessoais</span></h2>
+                </div>
 
-            <label for="pagamento" class="campoObrigatorio">Método de pagamento</label>
-            <input id="pagamento" type="text">
+                <div class="destinos">
+                    <div class="circulo">
+                        <img src="imagens/pessoaIcon.svg">
+                    </div>
+                    <h2>Informações de destino</h2>
+                </div>
 
-            <label for="whats" class="campoObrigatorio">Número de Whatsapp</label>
-            <input type="tel" id="whats" maxlength="14" placeholder="(XX) XXXXX-XXXX">
-            
+                <div class="viagem">
+                    <div class="circulo">
+                        <img src="imagens/pessoaIcon.svg">
+                    </div>
+                    <h2>Informações da viagem</h2>
+                </div>
 
-            <label for="observacao">Observação</label>
-            <input id="observacao" type="text">
+                <div class="revisao">
+                    <div class="circulo">
+                        <img src="imagens/pessoaIcon.svg">
+                    </div>
+                    <h2>Revisão e envio</h2>
+                </div>
+            </div>
+
+            <div class="form">
+
+                <div class="infoPessoais">
+                    <label>
+                        <input id="nome" class="campoObrigatorio" type="text">
+                        <img src="imagens/pessoaIcon.svg">
+                        <span>Nome completo</span>
+                    </label>
+
+                    <label for="cidade">Cidade</label>
+                    <input id="cidade" class="campoObrigatorio" type="text">
+        
+                    <label for="congregacao">Congregação</label>
+                    <input id="congregacao" class="campoObrigatorio" type="text">
+
+                    <label for="whats">Número de Whatsapp</label>
+                    <input type="tel" class="campoObrigatorio" id="whats" maxlength="14" placeholder="(XX) XXXXX-XXXX">
+        
+                    <label for="nascimento">Data de nascimento</label>
+                    <input id="nascimento" class="campoObrigatorio" type="text">         
+                </div>
+
+                <div class="infoDestino none">
+                    <span>Destino:</span>
+                
+                    <label>
+                        <input type="radio" name="destino">
+                        <img src="">
+                        <h2></h2>
+                        <span></span>
+                    </label>
+        
+                    <label>
+                        <input type="radio" name="destino">
+                        <img src="">
+                        <h2></h2>
+                        <span></span>
+                    </label>
+        
+                    <label>
+                        <input type="radio" name="destino">
+                        <img src="">
+                        <h2></h2>
+                        <span></span>
+                    </label>
+        
+                    <label>
+                        <input type="radio" name="destino">
+                        <img src="">
+                        <h2></h2>
+                        <span></span>
+                    </label>
+        
+                    <label>
+                        <input type="radio" name="destino">
+                        <img src="">
+                        <h2></h2>
+                        <span></span>
+                    </label>
+        
+                    <label>
+                        <input type="radio" name="destino">
+                        <img src="">
+                        <h2></h2>
+                        <span></span>
+                    </label>
+        
+                    <label>
+                        <input type="radio" name="destino">
+                        <img src="">
+                        <h2></h2>
+                        <span></span>
+                    </label>
+        
+                    <label>
+                        <input type="radio" name="destino">
+                        <img src="">
+                        <h2></h2>
+                        <span></span>
+                    </label>
+        
+                    <label>
+                        <input type="radio" name="destino">
+                        <img src="">
+                        <h2></h2>
+                        <span></span>
+                    </label>
+                </div>
+
+                <div class="infoViagem none">
+                    <label for="pessoas" class="campoObrigatorio">Número de pessoas</label>
+                    <input id="pessoas" type="number">
+        
+                    <label for="pagamento" class="campoObrigatorio">Método de pagamento</label>
+                    <input id="pagamento" type="text">
+
+                    <label for="observacao">Observação</label>
+                    <input id="observacao" type="text">
+                </div>
+
+                <div class="revisao none"></div>
+
+            </div>
+
+            <div class="botoes">
+                <button id="btnAnterior">/\</button>
+                <button id="btnProximo">\/</button>
+                <button id="btnLimpar">Limpar</button>
+                <button id="btnCalcular">Calcular</button>
+                <button id="btnEnviar">Enviar</button>
+            </div>
+
+            <!--<div class="valor">
+                <p>Valor total:</p>
+                <p class="valor">R$ <span class="valorTotal"></span></p>
+            </div>-->
+        
+        </main>
+
         </div>
-
-        <div class="formDestinos">
-            <span>Destino:</span>
-            
-            <label>
-                <input type="radio" name="destino">
-                <img src="">
-                <h2></h2>
-                <span></span>
-            </label>
-
-            <label>
-                <input type="radio" name="destino">
-                <img src="">
-                <h2></h2>
-                <span></span>
-            </label>
-
-            <label>
-                <input type="radio" name="destino">
-                <img src="">
-                <h2></h2>
-                <span></span>
-            </label>
-
-            <label>
-                <input type="radio" name="destino">
-                <img src="">
-                <h2></h2>
-                <span></span>
-            </label>
-
-            <label>
-                <input type="radio" name="destino">
-                <img src="">
-                <h2></h2>
-                <span></span>
-            </label>
-
-            <label>
-                <input type="radio" name="destino">
-                <img src="">
-                <h2></h2>
-                <span></span>
-            </label>
-
-            <label>
-                <input type="radio" name="destino">
-                <img src="">
-                <h2></h2>
-                <span></span>
-            </label>
-
-            <label>
-                <input type="radio" name="destino">
-                <img src="">
-                <h2></h2>
-                <span></span>
-            </label>
-
-            <label>
-                <input type="radio" name="destino">
-                <img src="">
-                <h2></h2>
-                <span></span>
-            </label>
-        </div>
-
-        <div class="botoes">
-            <button id="btnLimpar">Limpar</button>
-            <button id="btnCalcular">Calcular</button>
-            <button id="btnEnviar">Enviar</button>
-        </div>
-    </main>
 
     <div class="contato">
         <div class="iconMensagem">
