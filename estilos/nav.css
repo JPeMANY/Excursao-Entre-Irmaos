@@ -1,4 +1,7 @@
 /* ESTILOS GERAIS */
+    * {
+        font-family: "Montserrat", sans-serif;
+    }
 
     :root {
         --cinza: #363b39;
@@ -26,7 +29,6 @@
 
     body {
         margin: 0;
-        font-family: "Montserrat", sans-serif;
     }
 
     a {
@@ -36,7 +38,6 @@
     }
 
     button {
-        font-family: "Montserrat", sans-serif;
         cursor: pointer;
     }
 

@@ -140,3 +140,33 @@
 
         const btnAnterior = document.getElementById('btnAnterior');
         const btnProximo = document.getElementById('btnProximo');
+
+
+
+
+
+
+
+
+        // ENVIAR
+
+        const form = document.getElementById('formReserva');
+
+        form.addEventListener('submit', function(e) {
+          e.preventDefault();
+      
+          const formData = new FormData(form);
+      
+          fetch('https://script.google.com/macros/s/AKfycbyTo1VvFzArzFzNRhKytllZdscQnhQue2iU09OS0PrS8L2czM-7EWqt2flNpcn3WOjx/exec', {
+            method: 'POST',
+            body: formData,
+          })
+          .then(response => response.text())
+          .then(result => {
+            alert(result);
+            form.reset(); // Limpa o formulário após o envio
+          })
+          .catch(error => {
+            console.error('Erro:', error);
+          });
+        });

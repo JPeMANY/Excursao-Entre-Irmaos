@@ -112,39 +112,70 @@ main > img {
         width: 50%;
     }
 
-        .infoPessoais, .infoViagem {
+        .info {
             display: flex;
             flex-direction: column;
         }
 
-        .infoPessoais label {
-            width: 70%;
+        .info label {
+            width: 100%;
             height: 50px;
             margin: 5px 0 25px 0;
             position: relative;
         }
 
-        .infoPessoais input, .infoViagem input {
-            height: 100%;
-            width: 100%;
-            border-radius: 10px;
-            border: 1px solid #b3b3b3;
-            font-size: 19px;
-            padding: 0 10px;
+        .info .obrigatorio::after {
+            content: '';
+            position: absolute;
+            margin-left: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            background-image: url(../imagens/perigoIcon.svg);
+            background-size: cover;
+            height: 25px;
+            width: 25px;
+            z-index: 10;
         }
 
-            .infoPessoais label img {
+        .info input {
+            height: 100%;
+            width: 100%;
+            border-radius: 15px;
+            border: 2px solid #c8c8c8;
+            font-size: 19px;
+            padding-left: 61px;
+            background-color: transparent;
+            box-sizing: border-box;
+
+        }
+
+            .info label img {
                 position: absolute;
-                left: 0;
-                top: 0;
-                transform: translateY(50%);
+                pointer-events: none;
+                height: 50%;
+                left: 17px;
+                top: 50%;
+                transform: translateY(-50%);
             }
             
-            .infoPessoais label span {
+            .info label span {
                 position: absolute;
-                left: 0;
-                top: 0;
-                transform: translateY(50%);
+                left: 54px;
+                top: 50%;
+                transform: translateY(-50%);
+                pointer-events: none;
+                color: #c8c8c8;
+                border: none;
+                background-color: white;
+                padding: 2px 7px;
+                transition: 0.3s ease all;
+            }
+
+            .info input:focus ~ span,
+            .info input:not(:placeholder-shown) ~ span {
+                top: -10px;
+                transform: translateY(0);
+                font-size: 13px;
             }
 
 .infoDestino {
@@ -226,10 +257,10 @@ main > img {
             width: 90%;
         }
 
-    .campoObrigatorio::after, .infoDestino > span::after {
+    /*.campoObrigatorio::after, .infoDestino > span::after {
         content: ' *';
         color: red;
-    }
+    }*/
 
 
 .botoes {

@@ -70,28 +70,50 @@
             </div>
 
             <div class="form">
+                
+                <form id="formReserva" action="">
 
-                <div class="infoPessoais">
-                    <label>
-                        <input id="nome" class="campoObrigatorio" type="text">
-                        <img src="imagens/pessoaIcon.svg">
+                
+                <!--<form id="myForm">
+                    <input type="text" name="name" placeholder="Nome" required>
+                    <input type="email" name="email" placeholder="Email" required>
+                    <textarea name="message" placeholder="Sua mensagem" required></textarea>
+                    <button type="submit">Enviar</button>
+                  </form>-->
+
+                <div class="infoPessoais info">
+                    <label class="obrigatorio">
+                        <input name="nome" id="nome" type="text" placeholder="" required>
+                        <img src="imagens/pessoaIconCinza.svg">
                         <span>Nome completo</span>
                     </label>
 
-                    <label for="cidade">Cidade</label>
-                    <input id="cidade" class="campoObrigatorio" type="text">
-        
-                    <label for="congregacao">Congregação</label>
-                    <input id="congregacao" class="campoObrigatorio" type="text">
+                    <label class="obrigatorio">
+                        <input name="cidade" id="cidade" type="text" placeholder="" required>
+                        <img src="imagens/pessoaIconCinza.svg">
+                        <span>Cidade</span>
+                    </label>
 
-                    <label for="whats">Número de Whatsapp</label>
-                    <input type="tel" class="campoObrigatorio" id="whats" maxlength="14" placeholder="(XX) XXXXX-XXXX">
-        
-                    <label for="nascimento">Data de nascimento</label>
-                    <input id="nascimento" class="campoObrigatorio" type="text">         
+                    <label class="obrigatorio">
+                        <input name="congregacao" id="congregacao" type="text" placeholder="" required>
+                        <img src="imagens/pessoaIconCinza.svg">
+                        <span>Congregação</span>
+                    </label>
+
+                    <label class="obrigatorio">
+                        <input name="whats" id="whats" type="tel" maxlength="14" placeholder="(XX) XXXXX-XXXX" required>
+                        <img src="imagens/pessoaIconCinza.svg">
+                        <span>Número de Whatsapp</span>
+                    </label>
+
+                    <label class="obrigatorio">
+                        <input name="nascimento" id="nascimento" type="text" placeholder="" required>
+                        <img src="imagens/pessoaIconCinza.svg">
+                        <span>Data de nascimento</span>
+                    </label>     
                 </div>
 
-                <div class="infoDestino none">
+                <div class="infoDestino">
                     <span>Destino:</span>
                 
                     <label>
@@ -158,28 +180,38 @@
                     </label>
                 </div>
 
-                <div class="infoViagem none">
-                    <label for="pessoas" class="campoObrigatorio">Número de pessoas</label>
-                    <input id="pessoas" type="number">
-        
-                    <label for="pagamento" class="campoObrigatorio">Método de pagamento</label>
-                    <input id="pagamento" type="text">
+                <div class="infoViagem info">
 
-                    <label for="observacao">Observação</label>
-                    <input id="observacao" type="text">
+                    <label class="obrigatorio">
+                        <input name="pessoas" id="pessoas" type="number" placeholder="" required>
+                        <img src="imagens/pessoaIconCinza.svg">
+                        <span>Número de pessoas</span>
+                    </label>
+
+                    <label class="obrigatorio">
+                        <input name="pagamento" id="pagamento" type="text" placeholder="" required>
+                        <img src="imagens/pessoaIconCinza.svg">
+                        <span>Método de pagamento</span>
+                    </label>
+
+                    <label>
+                        <input name="observacao" id="observacao" type="text" placeholder="">
+                        <img src="imagens/pessoaIconCinza.svg">
+                        <span>Observação</span>
+                    </label>
                 </div>
 
-                <div class="revisao none"></div>
+                <div class="botoes">
+                    <button id="btnLimpar" type="reset">Limpar</button>
+                    <button id="btnCalcular">Calcular</button>
+                    <button id="btnEnviar" type="submit">Enviar</button>
+                </div>
+
+                </form>
 
             </div>
 
-            <div class="botoes">
-                <button id="btnAnterior">/\</button>
-                <button id="btnProximo">\/</button>
-                <button id="btnLimpar">Limpar</button>
-                <button id="btnCalcular">Calcular</button>
-                <button id="btnEnviar">Enviar</button>
-            </div>
+            <!--<div class="margem"></div>-->
 
             <!--<div class="valor">
                 <p>Valor total:</p>
