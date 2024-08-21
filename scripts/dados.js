@@ -1,98 +1,84 @@
-const destinos = [
+
+  const destinos = [
     {
-        titulo: 'Viagem *Gastronômica*',
-        destinos: 'Bento Gonçalves / Carlos Barbosa / Garibaldi',
-        dataInicio: '11/08',
-        dataRetorno: '11/08',
-        valor: '468,00',
-        imagens: [
-            '1.jpg',
-            '2.png',
-            '3.png',
-            '4.png',
-            '5.webp'
-        ]
-    },
-    {
-        titulo: 'teste',
-        destinos: 'Buenos Aires / Betel / Tigre / Campanópolis',
-        dataInicio: '16/08 ',
-        dataRetorno: '21/08',
-        valor: '7503,00',
-        imagens: [
-            '1.jpg',
-            '2.png',
-            '3.png',
-            '4.png',
-            '5.webp'
-        ]
-    },
-    {
+        titulo: 'Viagem Gastron?mica',
+        destinos: 'Bento Gon?alves / Carlos Barbosa / Garibaldi',
+        descricao: '',
+        dataInicio: '08/10/2024',
+        dataRetorno: '08/10/2024',
+        lugaresDisponiveis: '',
+        valor: ''
+      },{
+        titulo: '',
+        destinos: 'Buenos Aires / Betel / Tigre / Campan?polis ',
+        descricao: '',
+        dataInicio: 'NaN/NaN/NaN',
+        dataRetorno: 'NaN/NaN/NaN',
+        lugaresDisponiveis: '',
+        valor: ''
+      },{
         titulo: '',
         destinos: '',
-        dataInicio: '',
-        dataRetorno: '',
-        valor: '',
-        imagens: []
-    },
-    {
-        titulo: 'teste',
-        destinos: 'Maria Fumaça / Epopeia Italiana',
-        dataInicio: '01/09',
-        dataRetorno: '01/09',
-        valor: '650,00',
-        imagens: [
-            '1.jpg',
-            '2.png',
-            '3.png',
-            '4.png',
-            '5.webp'
-        ]
-    },
-    {
-        titulo: 'teste',
+        descricao: '',
+        dataInicio: 'NaN/NaN/NaN',
+        dataRetorno: 'NaN/NaN/NaN',
+        lugaresDisponiveis: '',
+        valor: ''
+      },{
+        titulo: '',
+        destinos: 'Maria Fuma?a / Epopeia Italiana ',
+        descricao: '',
+        dataInicio: '09/00/2024',
+        dataRetorno: '09/00/2024',
+        lugaresDisponiveis: '',
+        valor: ''
+      },{
+        titulo: '',
         destinos: 'Termas Marcelino Ramos ',
-        dataInicio: '06/09',
-        dataRetorno: '08/09',
-        valor: '920,00',
-        imagens: [
-            '1.jpg',
-            '2.png',
-            '3.png',
-            '4.png',
-            '5.webp'
-        ]
-    }, 
-    {
+        descricao: '',
+        dataInicio: '09/05/2024',
+        dataRetorno: '09/07/2024',
+        lugaresDisponiveis: '',
+        valor: ''
+      },{
         titulo: '',
         destinos: '',
-        dataInicio: '',
-        dataRetorno: '',
-        valor: '',
-        imagens: []
-    },
-    {
+        descricao: '',
+        dataInicio: 'NaN/NaN/NaN',
+        dataRetorno: 'NaN/NaN/NaN',
+        lugaresDisponiveis: '',
+        valor: ''
+      },{
         titulo: '',
         destinos: '',
-        dataInicio: '',
-        dataRetorno: '',
-        valor: '',
-        imagens: []
-    },
-    {
+        descricao: '',
+        dataInicio: 'NaN/NaN/NaN',
+        dataRetorno: 'NaN/NaN/NaN',
+        lugaresDisponiveis: '',
+        valor: ''
+      },{
         titulo: '',
         destinos: '',
-        dataInicio: '',
-        dataRetorno: '',
-        valor: '',
-        imagens: []
-    },
-    {
+        descricao: '',
+        dataInicio: 'NaN/NaN/NaN',
+        dataRetorno: 'NaN/NaN/NaN',
+        lugaresDisponiveis: '',
+        valor: ''
+      },{
         titulo: '',
         destinos: '',
-        dataInicio: '',
-        dataRetorno: '',
-        valor: '',
-        imagens: []
-    }
-];
+        descricao: '',
+        dataInicio: 'NaN/NaN/NaN',
+        dataRetorno: 'NaN/NaN/NaN',
+        lugaresDisponiveis: '',
+        valor: ''
+      },{
+        titulo: '',
+        destinos: '',
+        descricao: '',
+        dataInicio: 'NaN/NaN/NaN',
+        dataRetorno: 'NaN/NaN/NaN',
+        lugaresDisponiveis: '',
+        valor: ''
+      },
+  ]
