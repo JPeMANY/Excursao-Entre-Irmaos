@@ -168,7 +168,7 @@ main > img {
                 border: none;
                 background-color: white;
                 padding: 2px 7px;
-                transition: 0.3s ease all;
+                transition: 0.2s ease all;
             }
 
             .info input:focus ~ span,
