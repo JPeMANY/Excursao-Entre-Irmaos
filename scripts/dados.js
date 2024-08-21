@@ -8,7 +8,7 @@
         dataRetorno: '08/11/2024',
         lugaresDisponiveis: '',
         valor: '',
-        imagens: [jp.png,many.jpg],
+        imagens: ['jp.png','many.jpg'],
       },{
         titulo: '',
         destinos: 'Buenos Aires / Betel / Tigre / Campanópolis ',
@@ -17,7 +17,7 @@
         dataRetorno: 'NaN/NaN/NaN',
         lugaresDisponiveis: '',
         valor: '',
-        imagens: [],
+        imagens: [''],
       },{
         titulo: '',
         destinos: '',
@@ -26,7 +26,7 @@
         dataRetorno: 'NaN/NaN/NaN',
         lugaresDisponiveis: '',
         valor: '',
-        imagens: [],
+        imagens: [''],
       },{
         titulo: '',
         destinos: 'Maria Fumaça / Epopeia Italiana ',
@@ -35,7 +35,7 @@
         dataRetorno: '09/01/2024',
         lugaresDisponiveis: '',
         valor: '',
-        imagens: [],
+        imagens: [''],
       },{
         titulo: '',
         destinos: 'Termas Marcelino Ramos ',
@@ -44,7 +44,7 @@
         dataRetorno: '09/08/2024',
         lugaresDisponiveis: '',
         valor: '',
-        imagens: [],
+        imagens: [''],
       },{
         titulo: '',
         destinos: '',
@@ -53,7 +53,7 @@
         dataRetorno: 'NaN/NaN/NaN',
         lugaresDisponiveis: '',
         valor: '',
-        imagens: [],
+        imagens: [''],
       },{
         titulo: '',
         destinos: '',
@@ -62,7 +62,7 @@
         dataRetorno: 'NaN/NaN/NaN',
         lugaresDisponiveis: '',
         valor: '',
-        imagens: [],
+        imagens: [''],
       },{
         titulo: '',
         destinos: '',
@@ -71,7 +71,7 @@
         dataRetorno: 'NaN/NaN/NaN',
         lugaresDisponiveis: '',
         valor: '',
-        imagens: [],
+        imagens: [''],
       },{
         titulo: '',
         destinos: '',
@@ -80,7 +80,7 @@
         dataRetorno: 'NaN/NaN/NaN',
         lugaresDisponiveis: '',
         valor: '',
-        imagens: [],
+        imagens: [''],
       },{
         titulo: '',
         destinos: '',
@@ -89,6 +89,6 @@
         dataRetorno: 'NaN/NaN/NaN',
         lugaresDisponiveis: '',
         valor: '',
-        imagens: [],
+        imagens: [''],
       },
   ]
