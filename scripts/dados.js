@@ -8,7 +8,7 @@
         dataRetorno: '08/11/2024',
         lugaresDisponiveis: '',
         valor: '',
-        imagens: [,],
+        imagens: [jp.png,many.jpg],
       },{
         titulo: '',
         destinos: 'Buenos Aires / Betel / Tigre / Campanópolis ',
