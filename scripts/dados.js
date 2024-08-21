@@ -1,16 +1,16 @@
 
   const destinos = [
     {
-        titulo: 'Viagem Gastron?mica',
-        destinos: 'Bento Gon?alves / Carlos Barbosa / Garibaldi',
+        titulo: 'Viagem Gastronômica',
+        destinos: 'Bento Gonçalves / Carlos Barbosa / Garibaldi',
         descricao: '',
-        dataInicio: '08/10/2024',
-        dataRetorno: '08/10/2024',
+        dataInicio: '08/11/2024',
+        dataRetorno: '08/11/2024',
         lugaresDisponiveis: '',
         valor: ''
       },{
         titulo: '',
-        destinos: 'Buenos Aires / Betel / Tigre / Campan?polis ',
+        destinos: 'Buenos Aires / Betel / Tigre / Campanópolis ',
         descricao: '',
         dataInicio: 'NaN/NaN/NaN',
         dataRetorno: 'NaN/NaN/NaN',
@@ -26,18 +26,18 @@
         valor: ''
       },{
         titulo: '',
-        destinos: 'Maria Fuma?a / Epopeia Italiana ',
+        destinos: 'Maria Fumaça / Epopeia Italiana ',
         descricao: '',
-        dataInicio: '09/00/2024',
-        dataRetorno: '09/00/2024',
+        dataInicio: '09/01/2024',
+        dataRetorno: '09/01/2024',
         lugaresDisponiveis: '',
         valor: ''
       },{
         titulo: '',
         destinos: 'Termas Marcelino Ramos ',
         descricao: '',
-        dataInicio: '09/05/2024',
-        dataRetorno: '09/07/2024',
+        dataInicio: '09/06/2024',
+        dataRetorno: '09/08/2024',
         lugaresDisponiveis: '',
         valor: ''
       },{
