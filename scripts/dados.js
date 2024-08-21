@@ -80,7 +80,6 @@
         dataRetorno: 'NaN/NaN/NaN',
         lugaresDisponiveis: '',
         valor: '',
-<<<<<<< Updated upstream
         imagens: [],
       },{
         titulo: '',
@@ -93,9 +92,3 @@
         imagens: [],
       },
   ]
-=======
-        imagens: []
-    },
-];
-
->>>>>>> Stashed changes
