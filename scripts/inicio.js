@@ -1,6 +1,7 @@
 const cartoesDestino = document.getElementsByClassName('cartaoDestino');
-const tituloCartoes = Array.from(document.querySelectorAll('.cartaoDestino h4'));
+const tituloCartoes = document.querySelectorAll('.cartaoDestino h4');
 
+// TÍTULO DOS CARTÕES 
 
 function tituloComposto(numeroCartao, listaDestinos) {
     for (let k = 0; k < listaDestinos.length; k++) {
@@ -55,3 +56,7 @@ for (let i = 0; i < tituloCartoes.length; i++) {
 }
 
 // Usar .trim para retirar espaços das palavras!
+
+// ATUALIZAR IMAGENS DOS CARTÕES
+
+const imgsCartoes = document.querySelectorAll('.imgCartao');
