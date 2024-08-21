@@ -60,3 +60,18 @@ for (let i = 0; i < tituloCartoes.length; i++) {
 // ATUALIZAR IMAGENS DOS CARTÕES
 
 const imgsCartoes = document.querySelectorAll('.imgCartao');
+
+fetch('imagens/destinos/destinos.json')
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Erro ao carregar o arquivo JSON');
+        }
+        return response.json();
+    })
+    .then(data => {
+        console.log(data); // Exibe os dados no console
+        console.log(data.nome); // Acessa propriedades específicas, ex: nome
+    })
+    .catch(error => {
+        console.error('Erro:', error);
+    });
