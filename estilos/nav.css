@@ -156,6 +156,7 @@ nav {
     position: fixed;
     bottom: 35px;
     right: 35px;
+    z-index: 5;
 }
 
 .iconMensagem {
