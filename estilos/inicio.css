@@ -40,8 +40,9 @@ html {
     "titulo imagem"
     "rolar imagem"
     / 40% 60%;
+    justify-items: end;
     width: 100%;
-    height: 100vh;
+    height: calc(100vh - 120px);
     z-index: 0;
     color: var(--cinza);
     overflow: hidden;
@@ -51,6 +52,7 @@ html {
     .tituloInicial {
         grid-area: titulo;
         margin-left: var(--margem);
+        width: 560px;
     }
 
         h1, h2 {
@@ -74,13 +76,20 @@ html {
             font-size: 1rem;
         }
 
-        .rolarBaixo {
-            grid-area: rolar;
-            text-align: center;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin-left: var(--margem);
+    .rolarBaixo {
+        grid-area: rolar;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
+        width: 560px;
+        font-size: 0.8rem;
+        margin: auto 0 90px 0;
+    }
+
+        .rolarBaixo .rolar {
+            font-size: 0.8em;
         }
 
         .circulo {
@@ -111,7 +120,7 @@ html {
 #proximasViagens {
     display: flex;
     width: 100%;
-    padding: 40px 0;
+    padding: 0 0 40px 0;
 }
 
     h2 {
