@@ -1,6 +1,6 @@
 /* ESTILOS GERAIS */
     * {
-        font-family: "Montserrat", sans-serif;
+        font-family: "Montserrat", Arial, Helvetica, sans-serif;
     }
 
     :root {
@@ -54,7 +54,7 @@
 
 header {
     position: fixed;
-    z-index: 3;
+    z-index: 2;
 
     display: flex;
     align-items: center;
@@ -70,6 +70,7 @@ header {
     border-bottom: 4px solid white;   
     box-shadow: rgba(0, 0, 0, 0.15) 0 5px 24px;
 
+    font-size: 16px;
 }
 
 @keyframes gradiente {
@@ -95,39 +96,18 @@ header:hover {
     animation: gradiente 5s infinite;
 }
 
-nav {
-    width: calc(100vw - 250px);
-}
-
-    nav ul {
-        list-style: none;
-        font-weight: 400;
-        display: flex;
-        gap: 30px;
-    }
-    
-    nav li {
-        cursor: pointer;
-    }
-
-    nav a:nth-child(3) {
-        margin-left: auto;
-    }
-
     .logotipo {
         background-color: white;
         height: 100%;
-        width: 200px;
+        width: 350px;
         border-radius: 0 50px 50px 0;
         display: flex;
         justify-content: center;
         align-items: center;
         transition: ease-in 0.2s all;
-    }
-
-    .logotipo:hover {
-        width: 250px;
-        transition: ease-out 0.2s all;
+        overflow: hidden;
+        border: 3px solid white;
+        border-left: none;
     }
 
     .logotipo a {
@@ -140,14 +120,73 @@ nav {
         margin-left: -20px;
     }
 
-        .logotipo a img {
+        .logo {
             height: 75%;
+            position: relative;
+            z-index: 2;
         }
 
-        .logotipo p {
-            margin-left: 10px;
-            font-weight: 500;
+            .logo img {
+                height: 100%;
+                width: auto;
+                z-index: 2;
+            }
+
+        .logo::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            background-color: var(--azulMarinho);
+            transition: 0.5s all ease;
+            z-index: -1;
         }
+
+        .logotipo span {
+            margin-left: 15px;
+            font-size: 1.1em;
+            font-weight: 500;
+            transition: 0.4s all ease;
+            z-index: 2;
+        }
+
+        .logotipo:hover {
+            width: 400px;
+        }
+
+        .logotipo:hover .logo::before {
+            width: 1500%;
+            height: 1500%;
+        }
+
+        .logotipo:hover span {
+            color: white;
+        }
+
+
+    nav {
+        width: calc(100vw - 250px);
+    }
+
+        nav ul {
+            list-style: none;
+            font-weight: 400;
+            display: flex;
+            gap: 30px;
+        }
+        
+        nav li {
+            cursor: pointer;
+        }
+
+        nav a:nth-child(3) {
+            margin-left: auto;
+        }
+
 
 
 /* ICON MENSAGEM */
