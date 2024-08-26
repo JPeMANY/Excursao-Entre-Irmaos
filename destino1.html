@@ -11,14 +11,14 @@
     <link rel="stylesheet" type="text/css" href="estilos/nav.css">
     <link rel="stylesheet" type="text/css" href="estilos/destinos.css">
 
-    <title>1</title>
+    <title>0</title>
 </head>
 <body>
     <header>
         <div class="logotipo">
             <a href="index.html">
-                <img src="imagens/aviaoLogo.svg" alt="">
-                <p>VIAGEM</p>
+                <div class="logo"><img src="imagens/aviaoLogo.svg"></div>
+                <span>Excursão entre Irmãos</span>
             </a>
         </div>
 
@@ -33,13 +33,17 @@
 
     <main>
         <div class="conteudo">
-            <h1>Viagem<span>Gastronômica</span></h1>
+            <h1 id="titulo"></h1>
 
             <ul>
-                <li class="pessoa">9 lugares disponíveis</li>
-                <li class="local">3.984km de distância</li>
-                <li class="local">4 destinos (...)</li>
+                <li id="sobre" class="pessoa">9 lugares disponíveis</li>
+                <li id="incluido" class="local">3.984km de distância</li>
+                <li id="horarios" class="local">4 destinos (...)</li>
+                <li id="roteiro" class="pessoa"></li>
+                <li id="lugares" class="pessoa"></li>
             </ul>
+
+            <span id="valor"></span>
 
             <a class="mapa" href="https://earth.google.com/earth/d/1Ch83zIPAyPuJvJZFj7tWDJzjGZtkyx7e?usp=sharing" target="_blank">
                 <button class="btnIcoMapa"><img src="imagens/localIcon.svg"></button>
@@ -50,11 +54,11 @@
         </div>
 
         <div class="imagens">
-            <div class="posicao5"></div>
-            <div class="posicao4"></div>
-            <div class="posicao3"></div>
-            <div class="posicao2"></div>
-            <div class="posicao1"></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
         </div>
 
     </main>
@@ -66,7 +70,7 @@
     </div></a>
 
     <script src="scripts/dados.js"></script>
-    <script src="scripts/destinos.js"></script>
+    <script src="scripts/destino1.js"></script>
     
 </body>
 </html>

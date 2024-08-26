@@ -53,6 +53,7 @@ html {
         grid-area: titulo;
         margin-left: var(--margem);
         width: 560px;
+        margin-top: 20px;
     }
 
         h1, h2 {
@@ -76,6 +77,11 @@ html {
             font-size: 1rem;
         }
 
+    #inicio a {
+        color: var(--cinza);
+        margin: auto 0 90px 0;
+    }
+
     .rolarBaixo {
         grid-area: rolar;
         text-align: center;
@@ -85,11 +91,17 @@ html {
         gap: 5px;
         width: 560px;
         font-size: 0.8rem;
-        margin: auto 0 90px 0;
     }
 
         .rolarBaixo .rolar {
             font-size: 0.8em;
+        }
+
+        .rolarBaixo img {
+            width: 10%;
+            transform: rotate(90deg);
+            margin-top: 5px;
+            opacity: 0.8;
         }
 
         .circulo {
@@ -112,10 +124,20 @@ html {
             border: 14px solid white;
             border-radius: 50%;
             margin-right: var(--margem);
-            background-image: url(../imagens/cataratas.webp);
-            background-size: cover;
-            background-position: center;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            cursor: zoom-in;
         }
+
+            .imagemPrincipal img {
+                height: 100%;
+                transition: all 0.3s ease-in-out;
+            }
+            
+            .imagemPrincipal:hover img {
+                transform: scale(1.07);
+            }
 
 #proximasViagens {
     display: flex;
@@ -149,7 +171,7 @@ html {
     background-color: white;
 }
 
-    .destinos div {
+    /*.destinos div {
         display: flex;
         flex-direction: column;
     }
@@ -157,7 +179,7 @@ html {
     .destinos img {
         height: 100%;
         width: 100%;
-    }
+    }*/
 
     .mes {
         width: 50px;
@@ -184,7 +206,6 @@ html {
         display: flex;
         justify-content: center;
         align-items: center;
-        position: relative;
         transition: all 0.5s ease;
 
         box-shadow: rgba(149, 157, 165, 0.4) 0 15px 24px -3px;
@@ -195,16 +216,62 @@ html {
         flex: 3;
     }
 
-        .imgCartao {
-            position: absolute;
-            background-image: url('../imagens/cataratas.webp');
-            background-position: center;
-            background-size: cover;
+        .cartaoInterior {
             height: calc(100% - 30px);
             width: calc(100% - 30px);
             border-radius: 20px;
-            z-index: 0;
+            position: relative;
+            overflow: hidden;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
+
+            .cartaoInterior .imgFundo {
+                position: absolute;
+                height: 100%;
+                width: 100%;
+                background-image: url(../imagens/cataratas.webp);
+                background-position: center;
+                background-size: cover;
+                z-index: 0;
+            }
+
+            .cartaoInterior .imgFundo::after {
+                content: '';
+                position: absolute;
+                height: 100%;
+                width: 100%;
+                background-image: linear-gradient(0deg, var(--azulMarinho) 30%, rgba(255, 255, 255, 0) 100%);
+                z-index: 1;
+            }
+
+            .cartaoInterior .tituloData {
+                width: 30%;
+                height: 100%;
+                z-index: 1;
+            }
+
+            .cartaoInterior .info {
+                width: 60%;
+                height: 100%;
+                z-index: 1;
+            }
+
+            .cartaoInterior .saberMais {
+                width: 10%;
+                height: 100%;
+                z-index: 1;
+                background-color: white;
+                color: var(--cinza);
+            }
+
+
+
+
+
+
 
         .conteudoCartao {
             display: flex;
