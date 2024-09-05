@@ -1,0 +1,259 @@
+/* ----------- ESTILOS GERAIS ----------- */
+    * {
+        font-family: "Montserrat", Arial, Helvetica, sans-serif;
+    }
+
+    :root {
+        --cinza: #363b39;
+        --azulMarinho: #3582df;
+        --azul: #4fcbf3;
+        --verde: #6ddb98;
+
+        --azulMEscuro: #163458;
+        --azulEscuro: #156585;
+        --verdeEscuro: #0f7d5c;
+
+        --margem: 60px;
+    }
+
+    html {
+        scroll-behavior: smooth;
+        scroll-padding-top: 120px;
+    }
+
+    body {
+        margin: 0;
+    }
+
+    a {
+        text-decoration: none;
+        color: white;
+        cursor: pointer;
+    }
+
+    button {
+        cursor: pointer;
+    }
+
+    footer {
+        height: 200px;
+        background-color: white;
+    }
+
+    .none {
+        display: none;
+    }
+
+    @media (min-width: 1024px) {
+        :root {
+            --margem: 170px;
+        }
+    }
+
+
+/* ----------- NAVEGAÇÃO ----------- */
+
+header {
+    position: fixed;
+    z-index: 2;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: white;
+
+    width: 100%;
+    height: 60px;
+
+    border-bottom: 4px solid white;   
+    box-shadow: rgba(0, 0, 0, 0.15) 0 5px 24px;
+}
+
+    .logotipo {
+        background-color: var(--azul);
+        height: 100%;
+        width: 90px;
+        border-radius: 0 50px 50px 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        border: 3px solid white;
+        border-left: none;
+    }
+
+    .logotipo a {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        height: 100%;
+    }
+
+        .logo {
+            height: 55%;
+            position: relative;
+            z-index: 2;
+        }
+
+            .logo img {
+                height: 100%;
+                width: auto;
+            }
+
+        .logotipo span {
+            display: none;
+        }
+
+    nav {
+        margin-right: 25px;
+    }
+    
+        nav ul {
+            list-style: none;
+            font-weight: 400;
+            display: flex;
+            gap: 25px;
+        }
+
+            nav img {
+                height: 2rem;
+            }
+            
+            nav li {
+                display: none;
+                cursor: pointer;
+            }
+
+
+/* ----------- ICON MENSAGEM ----------- */
+
+.contato {
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    z-index: 5;
+}
+
+.iconMensagem {
+    height: 3.5rem;
+    width: 3.5rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+    background-image: linear-gradient(45deg, var(--azul), var(--verde));
+    
+    border: none;
+    border-radius: 50%;
+    border: 4px solid white;
+    box-shadow: rgba(0, 0, 0, 0.2) 0 10px 20px;
+}
+
+.iconMensagem img {
+    width: 80%;
+    height: auto;
+    transition: all 0.2s ease;
+}
+
+
+/* ---------------------- ESTILOS PARA PC ---------------------- */
+
+@media (min-width: 1024px) {
+
+    header {
+        background-image: linear-gradient(to right, var(--azul) 0%, var(--azulMarinho) 37.5%, var(--azul) 50%, var(--verde) 62.5%, var(--azul) 100%);
+        color: white;
+        background-size: 300% 100%;
+        background-position: 50% 0%;
+    }
+
+    @keyframes gradiente {
+        0% {
+            background-position: 50% 0%;
+        }
+    
+        30% {
+            background-position: 300% 0%;
+        }
+    
+        90% {
+            background-position: 0% 0%;
+        }
+    
+        100% {
+            background-position: 50% 0%;
+        }
+    }
+
+    header:hover {
+        background-position: 0% 100%;
+        animation: gradiente 5s infinite;
+    }
+
+        .logotipo {
+            width: 350px;
+            background-color: white;
+            transition: ease-in 0.2s all;
+            overflow: hidden;
+        }
+
+        .logotipo a {
+            color: var(--azulMarinho);
+            z-index: 2;
+            margin-left: -20px;
+        }
+
+            .logo::before {
+                content: '';
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                width: 100%;
+                height: 100%;
+                border-radius: 50%;
+                background-color: var(--azulMarinho);
+                transition: 0.5s all ease;
+                z-index: -1;
+            }
+
+            .logotipo span {
+                display: block;
+                margin-left: 15px;
+                font-size: 1.1em;
+                font-weight: 500;
+                transition: 0.4s all ease;
+                z-index: 2;
+            }
+
+            .logotipo:hover {
+                width: 400px;
+            }
+
+            .logotipo:hover .logo::before {
+                width: 1500%;
+                height: 1500%;
+            }
+
+            .logotipo:hover span {
+                color: white;
+            }
+
+            nav img {
+                filter: brightness(10);
+            }
+
+            nav li {
+                cursor: pointer;
+            }
+
+    /* ----------- ICON MENSAGEM ----------- */
+    
+    .iconMensagem:hover img {
+        transform: scale(1.15);
+        transition: all 0.2s ease;
+    }
+}

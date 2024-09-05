@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" type="text/css" href="estilos/nav.css">
+    <link rel="stylesheet" type="text/css" href="estilos/geral.css">
     <link rel="stylesheet" type="text/css" href="estilos/destinos.css">
 
     <title>0</title>
@@ -17,23 +17,28 @@
     <header>
         <div class="logotipo">
             <a href="index.html">
-                <div class="logo"><img src="imagens/aviaoLogo.svg"></div>
+                <div class="logo"><img src="imagens/logoOnibusBranco.svg"></div>
                 <span>Excursão entre Irmãos</span>
             </a>
         </div>
 
         <nav>
             <ul>
-                <a href="index.html"><li>INÍCIO</li></a>
-                <a href="index.html#proximasViagens"><li>PRÓXIMAS VIAGENS</li></a>
-                <a href="checkout.html"><li>CARRINHO</li></a>
+                <a href="index.html#proximasViagens">
+                    <img src="imagens/aviao.svg">
+                    <li>Próximas viagens</li>
+                </a>
+                <a href="checkout.html">
+                    <img src="imagens/carrinho.svg">
+                    <li>Carrinho</li>
+                </a>
             </ul>
         </nav>
     </header>
 
     <main>
         <div class="conteudo">
-            <h1 id="titulo"></h1>
+            <h1 id="titulo">Cataratas do<span>Iguaçu</span></h1>
 
             <ul>
                 <li id="sobre" class="pessoa">9 lugares disponíveis</li>
@@ -43,12 +48,12 @@
                 <li id="lugares" class="pessoa"></li>
             </ul>
 
-            <span id="valor"></span>
-
             <a class="mapa" href="https://earth.google.com/earth/d/1Ch83zIPAyPuJvJZFj7tWDJzjGZtkyx7e?usp=sharing" target="_blank">
                 <button class="btnIcoMapa"><img src="imagens/localIcon.svg"></button>
                 <button class="btnMapa">Abrir mapa da viagem</button>
             </a>
+
+            <span id="valor">R$ <span id="valorContent">470</span>,00</span>
     
             <a href="checkout.html"><button class="btnReservar">RESERVAR AGORA</button></a>
         </div>

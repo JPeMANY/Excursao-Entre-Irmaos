@@ -46,7 +46,11 @@ html {
     z-index: 0;
     color: var(--cinza);
     overflow: hidden;
-    
+}
+
+#inicio a {
+    color: var(--cinza);
+    margin: auto 0 90px 0;
 }
 
     .tituloInicial {
@@ -77,10 +81,17 @@ html {
             font-size: 1rem;
         }
 
-    #inicio a {
-        color: var(--cinza);
-        margin: auto 0 90px 0;
-    }
+        .tituloInicial button {
+            width: 100%;
+            height: 60px;
+            border: none;
+            border-radius: 30px;
+            color: white;
+            font-size: 0.8em;
+            font-weight: 500;
+            margin-top: 50px;
+            background-image: linear-gradient(45deg, var(--azulMarinho) 0%, var(--azul) 30%, var(--verde) 60%);
+        }
 
     .rolarBaixo {
         grid-area: rolar;
@@ -207,12 +218,24 @@ html {
         justify-content: center;
         align-items: center;
         transition: all 0.5s ease;
+        position: relative;
+        overflow: hidden;
 
         box-shadow: rgba(149, 157, 165, 0.4) 0 15px 24px -3px;
+        transition: all 0.8s ease;
+    }
+
+    .cartaoDestino::after {
+        content: '';
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        background-image: linear-gradient(45deg, rgba(255, 255, 255, 0) 0%, var(--azul) 100%);
+        z-index: 0;
+        opacity: 0.6;
     }
 
     .cartaoDestino:hover {
-        transition: all 0.8s ease;
         flex: 3;
     }
 
@@ -232,48 +255,140 @@ html {
                 position: absolute;
                 height: 100%;
                 width: 100%;
-                background-image: url(../imagens/cataratas.webp);
+                background-image: url(../imagens/destinos/Betel/betel.png);
                 background-position: center;
                 background-size: cover;
                 z-index: 0;
+                opacity: 0.9;
+                transition: all 1s ease;
             }
+
+                .cartaoDestino:hover .imgFundo {
+                    filter: blur(5px);
+                }
 
             .cartaoInterior .imgFundo::after {
                 content: '';
                 position: absolute;
                 height: 100%;
                 width: 100%;
-                background-image: linear-gradient(0deg, var(--azulMarinho) 30%, rgba(255, 255, 255, 0) 100%);
+                background-image: linear-gradient(0deg, var(--azulMarinho) 5%, rgba(255, 255, 255, 0) 100%);
                 z-index: 1;
+            }
+
+
+
+            .tituloData, .info, .saberMais {
+                transition: width 0.5s ease, opacity 0.5s ease 200ms;
             }
 
             .cartaoInterior .tituloData {
-                width: 30%;
+                width: 100%;
                 height: 100%;
                 z-index: 1;
+                position: relative;
             }
+
+                .tituloData h4 {
+                    width: 100%;
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    margin: 0;
+                    text-align: center;
+                    font-size: 1.4em;
+                    color: white;
+                }
+
+                .tituloData span {
+                    width: 100%;
+                    position: absolute;
+                    bottom: 15px;
+                    text-align: center;
+                    font-size: 0.8em;
+                    line-height: 0.8em;
+                }
 
             .cartaoInterior .info {
-                width: 60%;
+                width: 0%;
                 height: 100%;
                 z-index: 1;
+                opacity: 0;
+                pointer-events: none;
+                border-left: 2px solid white;
+                text-align: center;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: center;
             }
+
+                .cartaoInterior .info p {
+                    font-size: 0.8em;
+                    width: 80%;
+                    margin-top: 40px;
+                }
+
+                .cartaoInterior .info span {
+                    font-size: 1.2em;
+                    line-height: 1.2em;
+                    font-weight: 600;
+                    margin-bottom: 15px;
+                }
 
             .cartaoInterior .saberMais {
-                width: 10%;
+                width: 0%;
                 height: 100%;
                 z-index: 1;
+                opacity: 0;
                 background-color: white;
                 color: var(--cinza);
+                pointer-events: none;
             }
 
+            .cartaoInterior .saberMais div {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                height: 100%;
+            }
+
+                .saberMais .legenda {
+                    font-size: 0.5em;
+                    text-align: center;
+                    transition: all 0.5s ease;
+                    opacity: 0;
+                    width: 0px;
+                }
+
+                .saberMais:hover .legenda {
+                    width: 60px;
+                    opacity: 1;
+                }
+
+                .cartaoDestino:hover .tituloData {
+                    width: 30%;
+                }
+
+                .cartaoDestino:hover .info {
+                    width: 60%;
+                    opacity: 1;
+                    pointer-events: initial;
+                }
+
+                .cartaoDestino:hover .saberMais {
+                    width: 10%;
+                    opacity: 1;
+                    pointer-events: initial;
+                }
 
 
 
 
 
-
-        .conteudoCartao {
+/*        .conteudoCartao {
             display: flex;
             z-index: 1;
             width: 100%;
@@ -323,7 +438,7 @@ html {
                     background-repeat: no-repeat;
                     background-size: contain;
                 }
-
+/*
             .info {
                 flex: 0;
                 display: flex;
@@ -349,29 +464,25 @@ html {
                     background-color: white;
                     color: var(--cinza);
                     margin-top: 25px;
-                }
+                }*/
 
-            .cartaoDestino:hover .info {
-                flex: 1;
-                opacity: 1;
-                transition: flex 0.5s ease, opacity 0.5s ease 200ms;
-            }
 
+/*
             .cartaoDestino .imgCartao::after {
                 content: '';
                 height: 100%;
                 width: 100%;
                 display: block;
-            }
+            }*/
 
     /* --- DESTINO Azul Marinho --- */
     .destinoAzulM {
         background-color: var(--azulMarinho);
     }
 
-        .destinoAzulM h4 {
+        /*.destinoAzulM h4 {
             color: var(--azulMEscuro);
-        }
+        }*/
 
         .destinoAzulM .imgCartao::after {
             background-image: linear-gradient(0deg, var(--azulMarinho) 30%, rgba(255, 255, 255, 0) 100%);
@@ -382,9 +493,9 @@ html {
         background-color: var(--azul);
     }
 
-        .destinoAzul h4 {
+        /*.destinoAzul h4 {
             color: var(--azulEscuro);
-        }
+        }*/
 
         .destinoAzul .imgCartao::after {
             background-image: linear-gradient(0deg, var(--azul) 30%, rgba(255, 255, 255, 0) 100%);
@@ -395,9 +506,9 @@ html {
         background-color: var(--verde);
     }
 
-        .destinoVerde h4 {
+        /*.destinoVerde h4 {
             color: var(--verdeEscuro);
-        }
+        }*/
 
         .destinoVerde .imgCartao::after {
             background-image: linear-gradient(0deg, var(--verde) 30%, rgba(255, 255, 255, 0) 100%);

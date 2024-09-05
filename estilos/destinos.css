@@ -31,14 +31,11 @@ body {
         z-index: -1;
     }
 
-button {
-    font-family: "Montserrat", sans-serif;
-}
-
 main {
     background-color: rgba(53, 130, 223, 0.8);
     flex: 1;
     display: flex;
+    flex-direction: column;
 }
 
     .conteudo, .imagens {
@@ -48,9 +45,31 @@ main {
     }
 
     .conteudo {
-        padding: 0 100px;
+        width: 100%;
+        padding: 0;
         flex: 1;
         gap: 20px;
+        align-items: center;
+    }
+
+    @media (min-width: 1024px) {
+        main {
+            flex-direction: row;
+        }
+    
+            .conteudo {
+                padding: 0 7rem;
+                align-items: flex-start;
+            }
+
+            h1 {
+                font-size: 30pt;
+                text-align: left;
+            }
+
+                h1 span {
+                    font-size: 45pt;
+                }
     }
 
         h1 {
@@ -58,12 +77,13 @@ main {
             margin: 50px 0;
             display: flex;
             flex-direction: column;
-            font-size: 30pt;
+            font-size: 2rem;
+            text-align: center;
         }
         
             h1 span {
                 color: white;
-                font-size: 45pt;
+                font-size: 3rem;
             }
 
         .local::before {
@@ -76,8 +96,8 @@ main {
 
         main li {
             margin-bottom: 15px;
-            line-height: 35px;
-            font-size: 15pt;
+            line-height: 1rem;
+            font-size: 1rem;
         }
     
         main li::before {
@@ -88,7 +108,7 @@ main {
             padding: 0 15px;
             background-repeat: no-repeat;
             background-size: contain;
-            font-size: 25px;
+            font-size: 1rem;
             margin: 0 10px 0 0;
         }
 
@@ -97,6 +117,18 @@ main {
             list-style: none;
             padding: 0;
         }
+
+        #valor {
+            font-size: 1.7rem;
+            color: var(--azulMEscuro);
+            font-weight: 600;
+        }
+
+            #valorContent {
+                font-size: 2.5rem;
+                color: white;
+                font-weight: 700;
+            }
         
         .conteudo button {
             height: 60px;
@@ -145,6 +177,14 @@ main {
         }
 
     .imagens {
+        display: none;
+    }
+    
+
+@media (min-width: 1024px) {
+
+    .imagens {
+        display: block;
         flex: 2;
         justify-content: center;
         align-items: center;
@@ -228,3 +268,4 @@ main {
                 scale: 0.5;
             }
         }
+}
