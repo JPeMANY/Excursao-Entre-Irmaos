@@ -5,6 +5,7 @@ html {
 body {
     background-image: url('../imagens/cataratas.webp');
     background-repeat: no-repeat;
+    background-position: center;
     color: white;
     position: relative;
     display: flex;
@@ -39,7 +40,6 @@ main {
 }
 
     .conteudo, .imagens {
-        margin-top: 60px;
         display: flex;
         flex-direction: column;
     }
@@ -48,37 +48,17 @@ main {
         width: 100%;
         padding: 0;
         flex: 1;
-        gap: 20px;
+        gap: 10px;
         align-items: center;
-    }
-
-    @media (min-width: 1024px) {
-        main {
-            flex-direction: row;
-        }
-    
-            .conteudo {
-                padding: 0 7rem;
-                align-items: flex-start;
-            }
-
-            h1 {
-                font-size: 30pt;
-                text-align: left;
-            }
-
-                h1 span {
-                    font-size: 45pt;
-                }
     }
 
         h1 {
             color: var(--azulMEscuro);
-            margin: 50px 0;
             display: flex;
             flex-direction: column;
             font-size: 2rem;
             text-align: center;
+            margin-top: 120px;
         }
         
             h1 span {
@@ -94,29 +74,50 @@ main {
             background-image: url('../imagens/pessoaIcon.svg');
         }
 
-        main li {
-            margin-bottom: 15px;
-            line-height: 1rem;
-            font-size: 1rem;
-        }
-    
-        main li::before {
-            content: '';
-            position: relative;
-            left: 0;
-            top: 0;
-            padding: 0 15px;
-            background-repeat: no-repeat;
-            background-size: contain;
-            font-size: 1rem;
-            margin: 0 10px 0 0;
-        }
-
         .conteudo ul {
             margin: 0 0 30px 0;
             list-style: none;
             padding: 0;
+            background-color: rgba(22, 52, 88, 0.3);
+            border-radius: 25px;
+            width: 70vw;
+            height: 150px;
+            padding: 30px
         }
+
+            .conteudo li {
+                margin-bottom: 15px;
+                line-height: 1rem;
+                font-size: 1rem;
+            }
+        
+            .conteudo li::before {
+                content: '';
+                position: relative;
+                left: 0;
+                top: 0;
+                padding: 0 15px;
+                background-repeat: no-repeat;
+                background-size: contain;
+                font-size: 1rem;
+            }
+    
+            .btnMapa {
+                background-color: var(--azul);
+                color: white;
+                width: 70vw;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 0.5rem;
+                height: 3rem;
+                border-radius: 1.5rem;
+                border: 3px solid white;
+            }
+
+                .btnMapa img {
+                    height: 50%;
+                }
 
         #valor {
             font-size: 1.7rem;
@@ -129,47 +130,15 @@ main {
                 color: white;
                 font-weight: 700;
             }
-        
-        .conteudo button {
-            height: 60px;
-            border-radius: 30px;
-            border: 3px solid white;
-        }
 
         .btnReservar {
+            height: 60px;
+            border-radius: 30px;
+            border: none;
             background-color: white;
         }
 
-        .mapa {
-            display: inline-flex;
-            gap: 10px;
-            width: 75%;
-        }
 
-        .mapa button {
-            background-color: var(--azul);
-            color: white;
-        }
-
-            .mapa:hover button {
-                background-color: var(--azulEscuro);
-            }
-
-        .btnIcoMapa {
-            width: 60px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-            .btnIcoMapa img {
-                height: 60%;
-                width: auto;
-            }
-
-        .btnMapa {
-            flex: auto;
-        }
 
         .btnReservar {
             width: 75%;
@@ -180,8 +149,21 @@ main {
         display: none;
     }
     
+/* ---------------------- ESTILOS PARA PC ---------------------- */
 
 @media (min-width: 1024px) {
+    main {
+        flex-direction: row;
+    }
+
+        .conteudo {
+            padding: 0 7rem;
+            align-items: flex-start;
+        }
+
+        h1 {
+            text-align: left;
+        }
 
     .imagens {
         display: block;
@@ -267,5 +249,9 @@ main {
                 opacity: 0.5;
                 scale: 0.5;
             }
+        }
+
+        .mapa:hover button {
+            background-color: var(--azulEscuro);
         }
 }
