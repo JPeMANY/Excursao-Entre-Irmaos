@@ -1,0 +1,347 @@
+:root {
+    --azulClaro: #acdcea;
+}
+
+main {
+    background-color: #2d2d2d;
+    display: flex;
+    flex-direction: column;
+}
+
+h1 {
+    margin: 100px 0 40px 0;
+    display: flex;
+    flex-direction: column;
+    font-size: 1.5em;
+    color: white;
+    margin-left: var(--margem);
+}
+
+    h1 span {
+        font-size: 2.5em;
+        line-height: 1em;
+        background-image: linear-gradient(45deg, var(--azulMarinho) 0%, var(--azul) 10%, var(--verde) 40%);
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+main > img {
+    transform: rotate(30deg);
+    position: fixed;
+    z-index: 0;
+    right: var(--margem);
+}
+
+.pagina {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 70px var(--margem) 0 var(--margem);
+
+    background-color: white;
+    border-radius: 40px 40px 0 0;
+    z-index: 1;
+}
+
+    /*.progressoSecao {
+        width: 30%;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+        .linha {
+            position: absolute;
+            height: 100%;
+            width: 1px;
+            border: 3px solid var(--azulClaro);
+            box-sizing: border-box;
+            margin-left: 9px;
+        }
+
+        .pessoais, .destinos, .viagem, .revisao {
+            display: flex;
+            align-items: center;
+        }
+
+            .circulo {
+                height: 16px;
+                width: 16px;
+                border-radius: 50%;
+                background-color: var(--azulClaro);
+                border: 4px solid white;
+                z-index: 1;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+                .circulo img {
+                    opacity: 0;
+                    height: 60%;
+                    width: auto;
+                }
+
+            .destaque .circulo{
+                margin-left: -12px;
+                width: 40px;
+                height: 40px;
+                background-color: var(--azulMarinho);
+            }
+
+                .destaque .circulo img {
+                    opacity: 1;
+                }
+
+            h2 {
+                margin: 0 0 0 10px;
+                display: flex;
+                flex-direction: column;
+                font-weight: 400;
+                color: var(--azulClaro);
+            }
+
+                h2 span {
+                    font-weight: 700;
+                }
+
+            .destaque h2 {
+                color: var(--azulMarinho);
+            }*/
+
+    .form {
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+    }
+
+        .info {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .info label {
+            width: 100%;
+            height: 50px;
+            margin: 5px 0 25px 0;
+            position: relative;
+        }
+
+        .info .obrigatorio::after {
+            content: '';
+            position: absolute;
+            margin-left: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            background-image: url(../imagens/perigoIcon.svg);
+            background-size: cover;
+            height: 25px;
+            width: 25px;
+            z-index: 10;
+        }
+
+        .info input {
+            height: 100%;
+            width: 100%;
+            border-radius: 15px;
+            border: 2px solid #c8c8c8;
+            font-size: 19px;
+            padding-left: 61px;
+            background-color: transparent;
+            box-sizing: border-box;
+        }
+
+            .info label img {
+                position: absolute;
+                pointer-events: none;
+                height: 50%;
+                left: 17px;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+            
+            .info label span {
+                position: absolute;
+                left: 54px;
+                top: 50%;
+                transform: translateY(-50%);
+                pointer-events: none;
+                color: #c8c8c8;
+                border: none;
+                background-color: white;
+                padding: 2px 7px;
+                transition: 0.2s ease all;
+            }
+
+            .info input:focus ~ span {
+                color: black;
+            }
+
+            .info input:focus ~ span,
+            .info input:not(:placeholder-shown) ~ span {
+                top: -10px;
+                transform: translateY(0);
+                font-size: 13px;
+            }
+
+.infoDestino {
+    display: flex;
+    flex-direction: column;
+}
+
+    .infoDestino label {
+        display: flex;
+        align-items: center;
+        gap: 7px;
+    }
+
+    .infoDestino label h2 {
+        font-size: 1em;
+        font-weight: 500;
+    }
+
+    .infoDestino label span {
+        margin-left: auto;
+    }
+
+    .infoDestino input:checked ~ h2 {
+        font-weight: 700;
+    }
+
+    .infoDestino input:checked ~ span {
+        font-weight: 600;
+    }
+    
+
+/*
+.infoDestino {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    border-radius: 10px;
+}
+
+    .infoDestino > span {
+        width: 90%;
+        margin: 0;
+        padding: 0;
+        height: 15px;
+    }
+
+    .infoDestino label {
+        height: 45%;
+        min-width: 30%;
+        flex: 1;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+
+        border-radius: 20px;
+        --cor: var(--azulMarinho);
+        background-color: var(--cor);
+        color: white;
+    }
+
+        .infoDestino label:hover {
+            --cor: var(--azul);
+            scale: 1.04;
+        }
+
+        .infoDestino label::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: calc(100% - 30px);
+            width: calc(100% - 30px);
+            margin: 15px 0 0 15px;
+            background-image: linear-gradient(0deg, var(--cor) 30%, rgba(255, 255, 255, 0) 100%);
+        }
+
+        .infoDestino label:has(input:checked) {
+            --cor: var(--verde)
+        }
+
+        .infoDestino label input {
+            all: unset;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            border-radius: 20px;
+        }
+
+        .infoDestino img{
+            height: calc(100% - 30px);
+            width: calc(100% - 30px);
+            object-fit: cover;
+            object-position: center;
+            border-radius: 10px;
+            position: absolute;
+        }
+
+        .infoDestino label span, .infoDestino label h2 {
+            z-index: 1;
+            text-align: center;
+        }
+
+        .infoDestino h2 {
+            width: 90%;
+        }*/
+
+    /*.campoObrigatorio::after, .infoDestino > span::after {
+        content: ' *';
+        color: red;
+    }*/
+
+.valorSecao {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    color: var(--cinza);
+}
+
+    .valorLegenda {
+        font-weight: 500;
+    }
+
+    .valor {
+        font-size: 2em;
+        font-weight: 600;
+    }
+
+
+.botoes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-top: 60px;
+    width: 100%;
+}
+
+    .botoes button {
+        height: 50px;
+        width: 220px;
+        border-radius: 25px;
+        font-size: 19px;
+    }
+
+    .btnCinza {
+        border: 2px solid #b3b3b3;
+        color: #b3b3b3;
+        background-color: white;
+    }
+
+    .btnCor {
+        border: none;
+        background-image: linear-gradient(90deg, var(--azulMarinho) -50%, var(--azul) 50%, var(--verde) 120%);
+        color: white;
+    }

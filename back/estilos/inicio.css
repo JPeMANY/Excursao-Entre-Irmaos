@@ -155,8 +155,6 @@ html {
     flex-direction: column;
 }    
 
-/* Iníco das alterações! ---------------------- */
-
 .destinosSecao {
     display: flex;
     flex-direction: column;
@@ -188,7 +186,7 @@ html {
 
         h3 {
             margin: 0;
-            font-size: 1.7rem;
+            font-size: 25pt;
             color: var(--cinza);
         }
 
@@ -207,7 +205,6 @@ html {
 
         box-shadow: rgba(149, 157, 165, 0.4) 0 15px 24px -3px;
         transition: all 0.8s ease;
-        margin-bottom: 40px;
     }
 
     .cartaoDestino::after {
@@ -220,13 +217,13 @@ html {
         opacity: 0.6;
     }
 
-    /* .cartaoDestino:hover {
+    .cartaoDestino:hover {
         flex: 3;
-    } */
+    }
 
         .cartaoInterior {
-            /* height: calc(100% - 30px);
-            width: calc(100% - 30px); */
+            height: calc(100% - 30px);
+            width: calc(100% - 30px);
             border-radius: 20px;
             position: relative;
             overflow: hidden;
@@ -246,13 +243,12 @@ html {
                 background-size: cover;
                 z-index: 0;
                 opacity: 0.9;
-                filter: blur(3px); /* MOBILE */
-                /* transition: all 1s ease; */
+                transition: all 1s ease;
             }
 
-                /*.cartaoDestino:hover .imgFundo {
+                .cartaoDestino:hover .imgFundo {
                     filter: blur(5px);
-                }*/
+                }
 
             .cartaoInterior .imgFundo::after {
                 content: '';
@@ -265,79 +261,72 @@ html {
 
 
 
-            /*.tituloData, .info, .saberMais {
+            .tituloData, .info, .saberMais {
                 transition: width 0.5s ease, opacity 0.5s ease 200ms;
-            }*/
+            }
 
             .cartaoInterior .tituloData {
                 width: 100%;
-                /* height: 100%; */
-                height: 5rem;
+                height: 100%;
                 z-index: 1;
                 position: relative;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                text-align: center;
-                gap: 0.5rem;
             }
 
                 .tituloData h4 {
-                    /* width: 100%; */
-                    /*position: absolute;
+                    width: 100%;
+                    position: absolute;
                     top: 50%;
-                    transform: translateY(-50%);*/
+                    transform: translateY(-50%);
                     margin: 0;
+                    text-align: center;
                     font-size: 1.4em;
                     color: white;
                 }
 
                 .tituloData span {
-                    /* width: 100%; */
-                    /*position: absolute;
-                    bottom: 15px;*/
+                    width: 100%;
+                    position: absolute;
+                    bottom: 15px;
+                    text-align: center;
                     font-size: 0.8em;
                     line-height: 0.8em;
                 }
 
             .cartaoInterior .info {
-                /* width: 0%; */
-                /* height: 100%; */
+                width: 0%;
+                height: 100%;
                 z-index: 1;
-                /* opacity: 0; */
-                /* pointer-events: none; */
-                /* border-left: 2px solid white; */
-                border-top: 2px solid white;
+                opacity: 0;
+                pointer-events: none;
+                border-left: 2px solid white;
                 text-align: center;
                 display: flex;
                 flex-direction: column;
                 justify-content: space-between;
                 align-items: center;
-                padding: 1rem 1rem;
             }
 
                 .cartaoInterior .info p {
                     font-size: 0.8em;
-                    /* width: 80%; */
-                    /* margin-top: 40px; */
+                    width: 80%;
+                    margin-top: 40px;
                 }
 
                 .cartaoInterior .info span {
                     font-size: 1.2em;
                     line-height: 1.2em;
                     font-weight: 600;
-                    margin: 12px 0;
+                    margin-bottom: 15px;
                 }
 
             .cartaoInterior .saberMais {
-                /* width: 0%; */
-                width: 100%;
-                /* height: 100%; */
+                width: 0%;
+                height: 100%;
                 z-index: 1;
-                /* opacity: 0; */
+                opacity: 0;
                 background-color: white;
                 color: var(--cinza);
-                /* pointer-events: none; */
+                pointer-events: none;
             }
 
             .cartaoInterior .saberMais div {
@@ -346,20 +335,18 @@ html {
                 justify-content: center;
                 align-items: center;
                 width: 100%;
-                /* height: 100%; */
-                height: 3rem;
-                gap: 0.5rem;
+                height: 100%;
             }
 
                 .saberMais .legenda {
-                    font-size: 0.9rem;
+                    font-size: 0.5em;
                     text-align: center;
                     transition: all 0.5s ease;
-                    /* opacity: 0; */
-                    /* width: 0px; */
+                    opacity: 0;
+                    width: 0px;
                 }
 
-                /*.saberMais:hover .legenda {
+                .saberMais:hover .legenda {
                     width: 60px;
                     opacity: 1;
                 }
@@ -378,7 +365,7 @@ html {
                     width: 10%;
                     opacity: 1;
                     pointer-events: initial;
-                }*/
+                }
 
 
 
