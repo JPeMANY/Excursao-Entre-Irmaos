@@ -3,9 +3,10 @@ html {
 }
 
 body {
-    background-image: url('../imagens/cataratas.webp');
+    background-image: url('../imagens/destinos/Termas\ Marcelino\ Ramos/balneario-de-aguas-termais.jpg');
     background-repeat: no-repeat;
     background-position: center;
+    background-size: cover;
     color: white;
     position: relative;
     display: flex;
@@ -46,9 +47,9 @@ main {
 
     .conteudo {
         width: 100%;
-        padding: 0;
-        flex: 1;
-        gap: 10px;
+        /* padding: 0;
+        flex: 1; */
+        gap: 1.5rem;
         align-items: center;
     }
 
@@ -66,32 +67,24 @@ main {
                 font-size: 3rem;
             }
 
-        .local::before {
-            background-image: url('../imagens/localIcon.svg');
-        }
-    
-        .pessoa::before {
-            background-image: url('../imagens/pessoaIcon.svg');
-        }
-
-        .conteudo ul {
-            margin: 0 0 30px 0;
+        .lista {
+            margin: 0;
             list-style: none;
             padding: 0;
-            background-color: rgba(22, 52, 88, 0.3);
+            background-color: rgba(36, 75, 122, 0.3);
+            backdrop-filter: blur(9px);
             border-radius: 25px;
-            width: 70vw;
-            height: 150px;
-            padding: 30px
+            width: 70%;
+            padding: 30px;
         }
 
-            .conteudo li {
-                margin-bottom: 15px;
+            .lista li {
+                margin-bottom: 1.2rem;
                 line-height: 1rem;
                 font-size: 1rem;
             }
         
-            .conteudo li::before {
+            .lista li::before {
                 content: '';
                 position: relative;
                 left: 0;
@@ -101,11 +94,23 @@ main {
                 background-size: contain;
                 font-size: 1rem;
             }
+
+            .local::before {
+                background-image: url('../imagens/localIcon.svg');
+            }
+        
+            .pessoa::before {
+                background-image: url('../imagens/pessoaIcon.svg');
+            }
+
+        .mapaLink {
+            width: 70%;
+        }
     
             .btnMapa {
+                width: 100%;
                 background-color: var(--azul);
                 color: white;
-                width: 70vw;
                 display: flex;
                 align-items: center;
                 justify-content: center;
@@ -120,30 +125,32 @@ main {
                 }
 
         #valor {
-            font-size: 1.7rem;
+            font-size: 2rem;
             color: var(--azulMEscuro);
             font-weight: 600;
+            width: 70%;
+            text-align: center;
         }
 
             #valorContent {
-                font-size: 2.5rem;
+                font-size: 3rem;
                 color: white;
                 font-weight: 700;
             }
 
-        .btnReservar {
-            height: 60px;
-            border-radius: 30px;
-            border: none;
-            background-color: white;
+        .reservarLink {
+            width: 70%;
         }
 
-
-
-        .btnReservar {
-            width: 75%;
-            color: var(--azulMarinho);
-        }
+            .reservarLink button {
+                height: 60px;
+                width: 100%;
+                border-radius: 30px;
+                border: none;
+                background-color: white;
+                color: var(--azulMarinho);
+                font-size: 1.1rem;
+            }
 
     .imagens {
         display: none;
@@ -157,7 +164,9 @@ main {
     }
 
         .conteudo {
-            padding: 0 7rem;
+            /* padding: 0 7rem; */
+            margin-left: var(--margem);
+            width: 40%;
             align-items: flex-start;
         }
 
@@ -165,9 +174,21 @@ main {
             text-align: left;
         }
 
+    .mapaLink {
+        width: calc(70% + 60px);
+    }
+
+    #valor {
+        margin-left: 30px;
+    }
+
+    .reservarLink {
+        margin-left: 30px;
+    }
+
     .imagens {
-        display: block;
-        flex: 2;
+        display: flex;
+        width: 60%;
         justify-content: center;
         align-items: center;
         gap: 20px;
@@ -190,27 +211,59 @@ main {
             width: 70%;
             transform-origin: 50% 50%;
             transform: translateY(300%) scale(0.5);
-            transition: all 1s;
         }
 
         .imagens div:nth-child(1) {
-            animation: carrosel 10s ease-in-out 0s infinite;
+            animation: carrosel 24s ease-in-out 0s infinite;
+            background-image: url(../imagens/destinos/Bento\ Gonçalves/hoteis-bento-goncalves-spa-vinho.webp);
         }
 
         .imagens div:nth-child(2) {
-            animation: carrosel 10s ease-in-out 5s infinite;
+            animation: carrosel 24s ease-in-out 6s infinite;
+            background-image: url(../imagens/destinos/Bento\ Gonçalves/vinicola-salton-bento-goncalves.jpg);
         }
 
         .imagens div:nth-child(3) {
-            animation: carrosel 10s ease-in-out 10s infinite;
+            animation: carrosel 24s ease-in-out 12s infinite;
+            background-image: url(../imagens/destinos/Carlos\ Barbosa/275669630_5211635518929540_5314607729199918204_n.jpg);
         }
 
         .imagens div:nth-child(4) {
-            animation: carrosel 10s ease-in-out 15s infinite;
+            animation: carrosel 24s ease-in-out 18s infinite;
+            background-image: url(../imagens/destinos/Carlos\ Barbosa/carlos-barbosa-64a5beb071f7d.jpg);
         }
 
         .imagens div:nth-child(5) {
-            animation: carrosel 10s ease-in-out 20s infinite;
+            animation: carrosel 24s ease-in-out 24s infinite;
+            background-image: url(../imagens/destinos/Garibaldi/garibaldi-64b83f62c9dab.jpeg);
+        }
+
+        .imagens .imgInicial {
+            background-image: url('../imagens/destinos/Termas\ Marcelino\ Ramos/balneario-de-aguas-termais.jpg');
+            transform: translateY(50%);
+            opacity: 1;
+            scale: 1;
+            animation: imgInicial 3s ease-in-out 6s 1 forwards;
+        }
+
+        @keyframes imgInicial {
+            0% {}
+            
+            30% {
+                transform: translateY(-100%);
+                opacity: 0.5;
+                scale: 0.5;
+            }
+
+            60% {
+                transform: translateY(-100%);
+            }
+
+            100% {
+                transform: translateY(-200%);
+                opacity: 0.5;
+                scale: 0.5;
+            }
         }
 
         @keyframes carrosel {
@@ -218,28 +271,54 @@ main {
                 transform: translateY(400%);
                 opacity: 0.5;
                 scale: 0.5;
-            }
+            } 
 
-            15% {
+            /* Transição */
+
+            4% {
                 transform: translateY(300%);
                 opacity: 0.5;
                 scale: 0.5;
             }
 
-            35% {
+            24% {
+                transform: translateY(300%);
+                opacity: 0.5;
+                scale: 0.5;
+            }
+
+            /* Transição */
+
+            28% {
                 transform: translateY(50%);
                 opacity: 1;
                 scale: 1;
             }
 
-            65% {
+            48% {
                 transform: translateY(50%);
                 opacity: 1;
                 scale: 1;
             }
 
-            85% {
+            /* Transição */
+
+            52% {
                 transform: translateY(-100%);
+                opacity: 0.5;
+                scale: 0.5;
+            }
+
+            72% {
+                transform: translateY(-100%);
+                opacity: 0.5;
+                scale: 0.5;
+            }
+
+            /* Transição */
+
+            76% {
+                transform: translateY(-200%);
                 opacity: 0.5;
                 scale: 0.5;
             }

@@ -14,29 +14,26 @@ h1 {
     flex-direction: column;
     font-size: 1.5em;
     color: white;
-    margin-left: var(--margem);
+    text-align: center;
 }
 
     h1 span {
-        font-size: 2.5em;
-        line-height: 1em;
+        font-size: 2.5rem;
+        line-height: 2.5rem;
         background-image: linear-gradient(45deg, var(--azulMarinho) 0%, var(--azul) 10%, var(--verde) 40%);
         background-clip: text;
         -webkit-text-fill-color: transparent;
     }
 
 main > img {
-    transform: rotate(30deg);
-    position: fixed;
-    z-index: 0;
-    right: var(--margem);
+    display: none;
 }
 
 .pagina {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    padding: 70px var(--margem) 0 var(--margem);
+    align-items: flex-start;
+    padding-top: 3rem;
 
     background-color: white;
     border-radius: 40px 40px 0 0;
@@ -113,7 +110,8 @@ main > img {
     .form {
         display: flex;
         flex-direction: column;
-        width: 50%;
+        width: 80%;
+        margin-left: 1rem;
     }
 
         .info {
@@ -345,3 +343,28 @@ main > img {
         background-image: linear-gradient(90deg, var(--azulMarinho) -50%, var(--azul) 50%, var(--verde) 120%);
         color: white;
     }
+
+@media (min-width: 1024px) {
+    h1 {
+        margin-left: var(--margem); 
+        text-align: left;
+    }
+    
+    main > img {
+        display: block;
+        transform: rotate(30deg);
+        position: fixed;
+        z-index: 0;
+        right: var(--margem);
+    }
+    
+    .pagina {
+        align-items: center;
+        padding: 70px var(--margem) 0 var(--margem);
+    }
+
+    .form {
+        width: 50%;
+    }
+
+}

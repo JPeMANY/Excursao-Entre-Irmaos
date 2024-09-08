@@ -60,7 +60,7 @@ main {
         }
 
         .tituloInicial p {
-            font-size: 1.1rem;
+            font-size: 1.3rem;
             width: 80%;
         }
 
@@ -72,7 +72,7 @@ main {
             color: white;
             font-size: 1.1rem;
             font-weight: 500;
-            margin-top: 2rem;
+            margin-top: 4rem;
             background-image: linear-gradient(45deg, var(--azulMarinho) 0%, var(--azul) 30%, var(--verde) 60%);
         }
 
@@ -84,7 +84,7 @@ main {
         gap: 5px;
         font-size: 1rem;
         color: var(--cinza);
-        margin-bottom: 60px;
+        margin-bottom: 6rem;
     }
 
         .rolarBaixo .rolar {
@@ -95,7 +95,7 @@ main {
         .rolarBaixo img {
             width: 3rem;
             transform: rotate(90deg);
-            opacity: 0.8;
+            opacity: 0.5;
         }
 
     #inicio .imgEcirculo {
@@ -219,7 +219,6 @@ main {
                 position: absolute;
                 height: 100%;
                 width: 100%;
-                background-image: linear-gradient(0deg, var(--azulMarinho) 5%, rgba(255, 255, 255, 0) 100%);
                 z-index: 1;
             }
 
@@ -234,17 +233,13 @@ main {
                 align-items: center;
                 text-align: center;
                 gap: 0.5rem;
+                padding: 0.7rem 0.5rem;
             }
 
                 .tituloData h4 {
                     margin: 0;
                     font-size: 1.4em;
                     color: white;
-                }
-
-                .tituloData span {
-                    font-size: 0.8em;
-                    line-height: 0.8em;
                 }
 
             .info {
@@ -255,15 +250,16 @@ main {
                 justify-content: space-between;
                 align-items: center;
                 padding: 1rem 1rem;
+                z-index: 1;
             }
 
-                .info p {
-                    font-size: 0.8em;
+                .info .destinos {
+                    font-size: 1.1rem;
+                    font-weight: 500;
                 }
 
                 .info span {
-                    font-size: 1.2em;
-                    line-height: 1.2em;
+                    font-size: 1.5rem;
                     font-weight: 600;
                     margin: 12px 0;
                 }
@@ -388,8 +384,8 @@ main {
             color: var(--azulMEscuro);
         }*/
 
-        .destinoAzulM .imgCartao::after {
-            background-image: linear-gradient(0deg, var(--azulMarinho) 30%, rgba(255, 255, 255, 0) 100%);
+        .destinoAzulM .imgFundo::after {
+            background-image: linear-gradient(0deg, var(--azulMarinho) 5%, rgba(255, 255, 255, 0) 100%);
         }
 
     /* --- DESTINO Azul --- */
@@ -401,8 +397,8 @@ main {
             color: var(--azulEscuro);
         }*/
 
-        .destinoAzul .imgCartao::after {
-            background-image: linear-gradient(0deg, var(--azul) 30%, rgba(255, 255, 255, 0) 100%);
+        .destinoAzul .imgFundo::after {
+            background-image: linear-gradient(0deg, var(--azul) 5%, rgba(255, 255, 255, 0) 100%);
         }
 
     /* --- DESTINO verde --- */
@@ -414,16 +410,12 @@ main {
             color: var(--verdeEscuro);
         }*/
 
-        .destinoVerde .imgCartao::after {
-            background-image: linear-gradient(0deg, var(--verde) 30%, rgba(255, 255, 255, 0) 100%);
+        .destinoVerde .imgFundo::after {
+            background-image: linear-gradient(0deg, var(--verde) 5%, rgba(255, 255, 255, 0) 100%);
         }
 
 
 @media (min-width: 1024px) {
-    html {
-        font-size: 20px;
-    }
-
     #inicio .texto {
         width: 50%;
     }
