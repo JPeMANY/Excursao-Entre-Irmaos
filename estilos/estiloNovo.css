@@ -1,0 +1,230 @@
+/* Estilos Globais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: bold;
+    color: #007BFF;
+    margin-bottom: 10px;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 5px 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #007BFF;
+    font-size: 16px;
+}
+
+.actions {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.search-icon {
+    font-size: 20px;
+    margin-right: 15px;
+    color: #007BFF;
+}
+
+.sign-in {
+    background-color: #007BFF;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+/* Hero Section */
+.hero {
+    height: 60vh;
+    background: url('../imagens/praiaFundo.png') no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.hero-text {
+    max-width: 100%;
+}
+
+.hero-text h1 {
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.hero-text p {
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.btn {
+    background-color: white;
+    color: #007BFF;
+    padding: 8px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+/* Features Section */
+.features {
+    display: flex;
+    flex-direction: column;
+    padding: 30px 20px;
+    background-color: #f4f4f4;
+}
+
+.feature-box {
+    background-color: white;
+    margin: 10px 0;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.feature-box .icon {
+    font-size: 30px;
+    margin-bottom: 15px;
+    color: #007BFF;
+}
+
+.feature-box h3 {
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.feature-box p {
+    font-size: 14px;
+    color: #555;
+}
+
+/* Footer */
+footer {
+    background-color: #007BFF;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+footer .social-media {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer .social-media p {
+    font-size: 14px;
+    margin-right: 10px;
+}
+
+footer .social-media a {
+    font-size: 20px;
+    color: white;
+    margin: 0 5px;
+}
+
+/* Media Queries - Tablets e Desktops */
+
+/* Para tablets (min-width: 768px) */
+@media (min-width: 768px) {
+    header {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+    }
+
+    nav ul {
+        flex-direction: row;
+    }
+
+    nav ul li {
+        margin: 0 15px;
+    }
+
+    .hero {
+        height: 80vh;
+    }
+
+    .hero-text h1 {
+        font-size: 36px;
+    }
+
+    .hero-text p {
+        font-size: 16px;
+    }
+
+    .features {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .feature-box {
+        flex-basis: calc(50% - 20px);
+        margin: 10px;
+    }
+}
+
+/* Para desktops (min-width: 1024px) */
+@media (min-width: 1024px) {
+    .hero {
+        height: 90vh;
+    }
+
+    .hero-text h1 {
+        font-size: 48px;
+    }
+
+    .hero-text p {
+        font-size: 18px;
+    }
+
+    .features {
+        justify-content: space-between;
+    }
+
+    .feature-box {
+        flex-basis: calc(25% - 40px);
+    }
+
+    footer .social-media p {
+        font-size: 16px;
+    }
+
+    footer .social-media a {
+        font-size: 24px;
+    }
+}
